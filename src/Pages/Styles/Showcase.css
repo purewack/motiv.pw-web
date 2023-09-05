@@ -1,0 +1,24 @@
+.Page.Showcase{
+    background-color: var(--cback);   
+    margin-inline: auto;
+    padding-inline: 2rem;
+    max-width: 80ch;
+    font-size: 1.2rem;
+}
+
+.Page.Showcase .Title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.SplitCard.testcard img.cat1 {
+    content: url('https://www.purina.co.uk/sites/default/files/2023-03/Hero%20Pedigree%20Cats.jpg');
+}
+
+
+.Page.Showcase .Albums{ 
+    display: grid;
+    gap:1rem;
+}

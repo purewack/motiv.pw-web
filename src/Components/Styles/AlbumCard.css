@@ -1,0 +1,8 @@
+.AlbumCard {
+    background-color: white;
+    padding:1rem;
+}
+
+.AlbumCard img {;
+    height: min-content;
+}

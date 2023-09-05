@@ -1,0 +1,28 @@
+.Preview {
+    position: relative;
+}
+
+.Preview.Title::before,
+.Preview.Title::after {
+    content: '"';
+    text-transform: unset;
+}
+.Preview .Title {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: unset;
+    font-size: min(7rem, 12vw);
+    text-align: center;
+    mix-blend-mode: difference;
+    color: var(--cprimary);
+    user-select: none;
+}
+.Preview .Title::before,
+.Preview .Title::after{
+    content: '"';
+    font-family:inherit;
+    opacity: 0.4;
+}
+

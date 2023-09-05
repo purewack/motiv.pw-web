@@ -1,0 +1,74 @@
+
+@keyframes kf-begin {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.Page.Main .Hero {
+    background-color: none;
+    animation: kf-begin 1s 0.25s both;
+
+    /* scroll-snap-type: y mandatory;
+    overflow: auto; */
+
+    color: var(--cback);
+    height: 200vh;
+    /* top: var(--bb); */
+    z-index: 1;
+}
+
+.Page.Main .Scroller{
+    position: absolute;
+    left:0;
+    right: 0;
+    display: block;
+    text-align: center;
+    bottom: 0;
+    color: var(--cback);
+    mix-blend-mode: difference;
+    font-size: 4rem;
+    --pstart: max(0, calc(1 - var(--pscroll)));
+    opacity: calc(var(--pstart));
+}
+.Page.Main .Scroller:hover{
+    animation: kf-hover 0.75s infinite alternate;
+}
+@keyframes kf-hover {
+    from {transform: translateY(0);}
+    80% {transform: translateY(1rem);}
+    to {transform: translateY(1rem);}
+}
+
+
+.Page.Main .Hero h2 {
+    mix-blend-mode: difference;
+    font-size: min(2rem, 4vw);
+}
+
+.Page.Main .Title {
+    background-color: var(--cback);
+    position: sticky;
+    top:var(--bb);
+    height: calc(100vh - var(--bb)*2);
+    height: calc(100dvh - var(--bb)*2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.Page.Main .Hero img{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    clip-path: circle(calc(min(var(--pscroll), 1) * 100%));
+}
+
+.Page.Main .Logo.Sidefan{
+    display: inline-block;
+    z-index: 1;
+}
+
+.Page.Main .Logo.Sidefan{
+    filter:drop-shadow(0 0 10px gray);
+}

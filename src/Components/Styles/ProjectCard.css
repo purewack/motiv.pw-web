@@ -1,0 +1,99 @@
+.ProjectCard { 
+    --data-start: 0;
+    --data-end: 0;
+}
+.ProjectCard {
+    background-color: none;
+    position: relative;
+    transition: all 500ms;
+}
+.ProjectCard .TimeSpan {
+    display: inline-block;
+    position: absolute;
+    top:0;
+    left: calc(var(--data-start) * var(--unit));
+    width: calc((var(--data-end) - var(--data-start)) * var(--unit));
+    height: 2rem;
+    border-radius: 0.5rem;
+    opacity: 0.2;
+    background: var(--cprimary);
+    transition: all 500ms;
+}
+
+.ProjectCard h1::after{
+    content: " - " attr(data-time);
+    opacity: 0;
+    color: var(--cprimary);
+}
+.ProjectCard:hover h1::after{
+    opacity: 0.4;
+}
+
+.ProjectCard h1{
+    padding: 0;
+    margin: 0;
+    z-index: 10;
+    /* writing-mode: vertical-rl; */
+    /* text-orientation:sideways; */
+    color: black;
+    /* mix-blend-mode:overlay; */
+    /* height: 50rem; */
+
+    position: sticky;
+    left:0;
+    width: max-content;
+}
+.ProjectCard .ProjectData {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.ProjectCard:hover {
+    background-color: var(--cneutral);
+}
+.ProjectCard.Active {
+    flex-basis: 30rem;
+    background-color: var(--csecondary);
+    /* filter: drop-shadow(0 0 100px var(--cprimary)); */
+    margin-top: 3rem;
+}
+
+.ProjectCard.Active .TimeSpan{
+    /* height: 200vh; */
+    /* bottom: 100%; */
+    opacity: 0;
+    top: -4rem;
+    height: 4rem;
+}
+.ProjectCard .TimeSpan img {
+    content: url('https://img.icons8.com/?size=512&id=bDrb5MdYaEje&format=png');
+    object-fit: contain;
+    scale: 0;
+    filter: invert(1);
+    padding: 0.5rem;
+}
+.ProjectCard.Active .TimeSpan img {
+    scale: 1;
+}
+
+.ProjectCard .Description {
+    max-width: 80ch;
+}
+
+
+.ProjectCard.Mini h1{
+    font-size: 1rem;
+}
+.ProjectCard.Mini .Content{
+    display: none;
+}
+.ProjectCard.Mini {
+    min-height: 2rem;
+    max-height: 2rem;
+}
+.ProjectCard.Mini .TimeSpan{
+    opacity: 1;
+}
+.ProjectCard.Software {
+
+}

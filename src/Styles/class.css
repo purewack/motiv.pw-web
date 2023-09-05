@@ -1,0 +1,129 @@
+
+#root {
+  background: white;
+  color: var(--cmain);
+  line-height: 1.25;
+}
+
+:root{ 
+  --bb: min(0.5rem, min(5vh,5vw));
+  --bbb: calc(var(--bb)*3);
+  --acc: min(4px,3vh);
+  --pscroll: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  transition: color 0.35s, background-color 0.25s, outline 0.25s,
+    border 0.5s, opacity 0.35s;
+}
+
+.WIP {
+  /* text-decoration:line-through; */
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.Nav, .Footer {
+  position: sticky;
+  top: var(--bb);
+  width:100%;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  min-height: 4rem;
+  z-index: 9;
+  padding-inline: var(--bb);
+}
+.Nav {
+  opacity: min(var(--pscroll),1);
+  filter: drop-shadow(0 0 10px black);
+}
+.Footer {
+  z-index: 0;
+  border: none;
+  background: var(--csecondary);
+}
+
+.Page {
+  min-height: 100vh;
+  min-height: 100dvh;
+  /* padding-inline: var(--bb); */
+}
+
+/* .Page:after,
+.Page:before {
+  content: "";
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  border: solid var(--cprimary) var(--bb);
+}  */
+.Page:before{
+  z-index: 11;
+  border-radius: 0;
+}
+
+.Wide {
+  text-transform: uppercase;
+  letter-spacing: 1.7rem;
+}
+
+.Box {
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+}
+.Box.Inner {
+  box-shadow: inset 0 0 20px gray;
+}
+
+.Card {
+  color: var(--cmain);
+  background-color: var(--cneutral);
+  border-radius: 1rem;
+  overflow: hidden;
+/* contrast(170%) brightness(1000%); */
+}
+
+.Card,
+.Grainy { 
+  background-image: url('./noise.svg');
+  background-blend-mode: multiply;
+  background-size: 75px;
+}
+
+.Polaroid {
+  background-color: white;
+  font-size: 1.3vw;
+  padding: 1vw;
+  padding-bottom: 4vw;
+  width: 15vw;
+  height: 20vw;
+  position: relative;
+}
+
+.Polaroid::after {
+  content: attr(data-title);    
+  font-family: 'Gochi Hand', cursive;
+  color: #444;
+}
+
+
+.Polaroid:nth-child(1) {
+  transform: rotate(10deg);
+}
+.Polaroid:nth-child(2) {
+  transform: rotate(-7deg);
+}
+.Polaroid:nth-child(3) {
+  transform: rotate(15deg);
+}
+.Polaroid:nth-child(4) {
+  transform: rotate(-3deg);
+}

@@ -1,0 +1,90 @@
+/* tablet */
+@media only screen and (max-width: 1000px ) and (min-width:651px) {
+    .Page.Main .HeadingContainer {
+        display: block;
+        position: relative;
+        height: 100vh;
+    }
+    .Page.Main .HeadingScrollContainer {
+        height: 100vh;
+    }
+    .Page.Main .HeadingContainer .Heading > :first-child {
+        margin: 0;
+    }
+    .Page.Main .HeadingContainer .Heading{
+        height: 100vh;
+        justify-content: center;
+    }
+    .Page.Main .HeadingContainer .PersonalIntro {
+        position: absolute;
+        top:50%;
+        right:1rem;
+        transform: translateY(-50%);
+        background-color: var(--cback);
+        height: 60%;
+        width: 35%;
+        z-index: 9;
+        box-shadow: inset 0 0 20px gray;
+    }
+}
+
+@media only screen and (max-width: 1000px ){
+    .Page.Main .Song {
+        /* width: 100%; */
+        height: 100dvh;
+        display: grid;
+        grid-template-areas: 
+            'main'
+            'info';
+        grid-template-columns: unset;
+        grid-template-rows: auto 0%;
+        transition: grid-template-rows 700ms;
+    }
+    
+    .Page.Main .Song.Info {
+        grid-template-columns: unset;
+        grid-template-rows: auto 40%;
+    }
+    .Page.Main .Song.Info .Preview{
+        align-items: flex-end;
+    }
+    .Page.Main .Song .Description {
+        padding:0;
+        padding-inline: 10%;
+        justify-content: flex-start;
+    }
+    .Page.Main .Song .Description .DescriptionContent {
+        width: 100%;
+        padding-top: 2rem;
+        transform: translateY(-1rem);
+    }
+    .Page.Main .Song .Description {
+        min-height: min-content;
+        max-height: 100%;
+    }
+    .Page.Main .Song .Description .DescriptionContent {
+        max-height: 100%;
+        min-height: min-content;
+    }
+}
+
+/* phone */
+@media only screen and (max-width: 650px) {
+    .Page.Main .HeadingContainer {
+        height: 150vh;
+        height: 150dvh;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .Page.Main .HeadingContainer .Heading {
+        height: 50vh;
+        height: 50dvh;
+    } 
+    .Page.Main .HeadingContainer .Heading a:first-child {
+        margin: 0;
+    }
+    .Page.Main .HeadingContainer .Heading h1::after {
+        content: none;
+    }
+
+}

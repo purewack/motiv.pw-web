@@ -1,0 +1,21 @@
+/* Debug */
+
+header {
+	width: 100%;
+  border: dotted greenyellow 2px;
+}
+
+section {
+	width: 100%;
+  border: dotted blue 4px;
+}
+
+div {
+  border: solid gray 1px;
+}
+
+.Page::after, .Page::before{
+  content: none;
+}
+
+/* Debug end */

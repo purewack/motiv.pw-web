@@ -1,0 +1,16 @@
+.Page.Error section{
+    color: rgb(109, 0, 0);
+}
+
+.Page.Error{
+    background-color: var(--cback);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Page.Error a {
+    color: unset;
+    display: block;
+}
