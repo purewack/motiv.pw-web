@@ -1,5 +1,5 @@
 import React,{ useState } from "react";
-import "../Components/Styles/DetailDiv.css"
+import "./style.css"
 
 export default function DetailDiv({className = "", id, descriptionComponent, defaultState = 'Detail', children}){
 

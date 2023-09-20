@@ -1,17 +1,18 @@
+import './style.css'
+import './style.mobile.css'
+import './style.title.mobile.css'
+
 import { useEffect, useRef, useState } from "react";
-import {Logo, LogoBar} from '../Components/Logo'
-import DetailDiv from "../Components/DetailDiv";
-import Video from "../Components/Video";
-import './Styles/Main.css'
-import './Styles/Main.Title.css'
-import './Styles/Main.Mobile.css'
+import {Logo, LogoBar} from '../../Components/Logo'
+import DetailDiv from "../../Components/DetailDiv";
 
-import backLogo from '../Media/_MG_4734.JPG'
 
-import who from '../Contents/who.jsx'
-import songDreamsDescription from '../Contents/Songs/dreams.jsx'
-import TestDiv from "../Components/TestDiv";
-import AlbumCard from "../Components/AlbumCard";
+import backLogo from '../../Media/back3_low.jpg'
+
+import who from '../../Contents/who.jsx'
+import songDreamsDescription from '../../Contents/Songs/dreams.jsx'
+import TestDiv from "../../Components/TestDiv";
+import AlbumCard from "../../Components/AlbumCard";
 
 
 
@@ -60,11 +61,11 @@ export default function Main() {
           <div className={"Who "}>
             {who}
           </div>
-          <div className="Bars">
+          {/* <div className="Bars">
           <LogoBar className="Bar1" text={"M O T I V - P W -"} />
           <LogoBar className="Bar2" text={"M O T I V - P W -"} />
           <LogoBar className="Bar3" text={"M O T I V - P W -"} />
-          </div>
+          </div> */}
         </div>
       </header>  
       </section>

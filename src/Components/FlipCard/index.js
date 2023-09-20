@@ -1,5 +1,5 @@
 import { useState } from "react";
-import './Styles/FlipCard.css'
+import './style.css'
 
 /* <FlipCard title={"Testing"}>
   <img

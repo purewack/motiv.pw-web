@@ -1,6 +1,6 @@
 import { useState } from "react"
-import './Styles/AlbumCard.css'
-import noCover from '../Media/nocover.svg'
+import noCover from '../../Media/nocover.svg'
+import "./style.css"
 
 export default function AlbumCard({
     className = '', 

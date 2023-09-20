@@ -1,4 +1,4 @@
-import './Styles/Logo.css'
+import "./style.css"
 
 export function Logo({ type='icon', className = ""}) {
   return type === 'backed' ? (

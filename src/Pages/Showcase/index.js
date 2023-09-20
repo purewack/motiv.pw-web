@@ -1,11 +1,12 @@
+import './style.css'
+
 import { useEffect, useRef, useState } from "react";
-import {Logo} from '../Components/Logo'
-import './Styles/Showcase.css'
-import { SplitCard } from "../Components/SplitCard";
-import useDelay from "../Util/DelayedState";
-import DetailDiv from "../Components/DetailDiv";
-import TestDiv from "../Components/TestDiv";
-import AlbumCard from "../Components/AlbumCard";
+import {Logo} from '../../Components/Logo'
+import { SplitCard } from "../../Components/SplitCard";
+import useDelay from "../../Util/DelayedState";
+import DetailDiv from "../../Components/DetailDiv";
+import TestDiv from "../../Components/TestDiv";
+import AlbumCard from "../../Components/AlbumCard";
 
 export default function Showcase() {
 

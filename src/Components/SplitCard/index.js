@@ -1,4 +1,4 @@
-import "./Styles/SplitCard.css"
+import "./style.css"
 
 export function SplitCard({children, className}){
 

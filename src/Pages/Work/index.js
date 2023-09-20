@@ -1,20 +1,21 @@
+import './style.css'
+import './style.mobile.css'
+
 import { useEffect, useRef, useState } from "react";
-import {Logo} from '../Components/Logo'
-import './Styles/Work.css'
-import './Styles/Work.Mobile.css'
-import useDelay from "../Util/DelayedState";
-import DetailDiv from "../Components/DetailDiv";
-import TestDiv from "../Components/TestDiv";
-import AlbumCard from "../Components/AlbumCard";
+import {Logo} from '../../Components/Logo'
+import useDelay from "../../Util/DelayedState";
+import DetailDiv from "../../Components/DetailDiv";
+import TestDiv from "../../Components/TestDiv";
+import AlbumCard from "../../Components/AlbumCard";
 
-import projectSneel from "../Contents/Projects/sneel"
-import projectMinim from "../Contents/Projects/minim"
-import ProjectCard from "../Components/ProjectCard";
+import projectSneel from "../../Contents/Projects/sneel"
+import projectMinim from "../../Contents/Projects/minim"
+import ProjectCard from "../../Components/ProjectCard";
 
-import workTitleContent from "../Contents/Projects/title"
-import SoftwareCard from "../Components/SoftwareCard";
+import workTitleContent from "../../Contents/Projects/title"
+import SoftwareCard from "../../Components/SoftwareCard";
 
-import sneelImage from '../Media/Sneel/face.png'
+import sneelImage from '../../Media/Sneel/face.png'
 
 export default function Work() {
 

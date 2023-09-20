@@ -1,5 +1,5 @@
-import {Logo} from '../Components/Logo'
-import './Styles/Error.css'
+import './style.css'
+import {Logo} from '../../Components/Logo'
 
 export default function Error(){
     return <div className="Page Error Grainy">

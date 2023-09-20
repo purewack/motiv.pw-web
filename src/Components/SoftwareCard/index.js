@@ -1,4 +1,4 @@
-import './Styles/SoftwareCard.css'
+import "./style.css"
 
 export default function SoftwareCard({title, mobile=true, className = '', children, ...restProps}){
     return <div className={"SoftwareCard " + (mobile ? "Mobile " : "") + className} {...restProps}>
