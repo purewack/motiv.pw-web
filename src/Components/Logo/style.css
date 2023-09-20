@@ -1,6 +1,6 @@
 
 .Logo {
-  --unit: min(10rem, 10vw);
+  --unit: min(10em,10vw);
 }
 
 .Logo.Sidefan {
@@ -10,6 +10,19 @@
   fill: white;
   mix-blend-mode: exclusion;
 }
+.Logo.Sidefan{
+  display: flex;
+}
+.Logo.Sidefan .LogoTextScene line {
+  --len: 57;
+  stroke-dasharray: var(--len);
+  stroke-dashoffset: var(--len);
+  transition: stroke-dashoffset 2s;
+}
+.Logo.Sidefan .LogoTextScene:hover line {
+  stroke-dashoffset: calc(var(--len) * -2 * 1);
+}
+
 
 .Logo svg {
   display: inline-block;
@@ -17,7 +30,7 @@
   padding:0; 
   stroke: white;
   fill: white;
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
 }
 
 .Logo.Sidefan text {
@@ -25,31 +38,36 @@
   font-size: 16px;
 }
 
-.Logo.Sidefan .Wrap {
-  position: absolute;
+.Logo.Sidefan .Wrap svg {
+  width: 100%;
+  height: 100%;
 }
 .Logo.Sidefan .SpreadScene {
   height: var(--unit);
-  width: var(--unit);
+  width: calc(var(--unit) * 0.75);
 }
-.Logo.Sidefan .LogoText {
+.Logo.Sidefan .LogoTextScene {
   height: var(--unit);
-  width: calc(var(--unit) * 5.4);
-  clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
-  -webkit-clip-path: polygon(0 0, 100% 0, 92% 100%, 0% 100%);
+  width: calc(var(--unit) * 4.75);
+  /* clip-path: polygon(0 0, 100% 0, 91% 100%, 0% 100%); */
+}
+
+
+.Logo.Sidefan .Wrap{
+  display: inline-block;
+  height: var(--unit);
 }
 .Logo.Sidefan .Wrap.ll{
-  right:100%;
-  top:0;
-  bottom:0;
+  width: calc(var(--unit) * 0.75);
+}
+.Logo.Sidefan .Wrap.Dummy{
+  width: calc(var(--unit) * 0.5);
 }
 .Logo.Sidefan .Wrap.rr{
-  top:0;
-  bottom:0;
-  left:92%;
-  width: calc(var(--unit)*1);
-  clip-path: polygon(44% 0%, 100% 0, 100% 100%, 0% 100%);
-  -webkit-clip-path: polygon(44% 0%, 100% 0, 100% 100%, 0% 100%);
+  position: absolute;
+  right: calc(var(--unit) * 0);
+  width: calc(var(--unit) * 1);
+  clip-path: polygon(52% 00%, 100% 0, 100% 100%, 10% 100%);
 }
 
 .Logo.Sidefan .Spread {
@@ -89,7 +107,7 @@
     opacity:0;
   }
   to{
-    transform:translate3d(-100%,0,0);
+    transform:translate3d(-50%,0,0);
     opacity:1;
   }
 }

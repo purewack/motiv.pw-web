@@ -2,7 +2,7 @@ import "./style.css"
 
 export function Logo({ type='icon', className = ""}) {
   return type === 'backed' ? (
-    <div className={"Logo Full " + className}>
+    <div className={"Logo Backed " + className}>
       <div className='Container'>
         <h1 className="Main">{children}</h1>
         {[...Array(5)].map((v, i) => (
@@ -26,21 +26,28 @@ export function Logo({ type='icon', className = ""}) {
   type === 'full' ? ( 
     <div className="Logo Sidefan">
       <div className='Wrap ll'>
-      <svg viewBox="0 0 12 14.2"  className='SpreadScene ll'>
-        <g className="Spread ll"><text x={4} y={13.5} >M</text></g>
-        <g className="Spread ll"><text x={4} y={13.5} >M</text></g>
-        <g className="Spread ll"><text x={4} y={13.5} >M</text></g>
-      </svg>
+        <svg viewBox="0 0 12 16"  className='SpreadScene ll'>
+          {/* <rect x='0' y='0' width={12} height={16} stroke='red' fill='purple'></rect> */}
+          <g className="Spread ll"><text x={1} y={13.5} >M</text></g>
+          <g className="Spread ll"><text x={1} y={13.5} >M</text></g>
+          <g className="Spread ll"><text x={1} y={13.5} >M</text></g>
+        </svg>
       </div>
-      <svg viewBox="0 0 72 14" className="LogoText">
-        <text x={-2} y={13.3} className="LogoText">M O T I V</text>
-      </svg>
+      {/* <div> */}
+        <svg viewBox="0 0 76 16" className="LogoTextScene">
+          {/* <rect x='0' y='0' width={76} height={16} stroke='black' fill='green'></rect> */}
+          <text x={0} y={13.5} className="LogoText">M O T I V</text>
+          <line x1={1} x2={57} y1={15.5} y2={15.5}></line>
+        </svg>
+      {/* </div> */}
+      <div className='Wrap Dummy'></div>
       <div className='Wrap rr'>
-      <svg viewBox="0 0 12 14" className='SpreadScene rr'>
-        <g className="Spread rr"><text x={0} y={13.3} >V</text></g>
-        <g className="Spread rr"><text x={0} y={13.3} >V</text></g>
-        <g className="Spread rr"><text x={0} y={13.3} >V</text></g>
-      </svg>
+        <svg viewBox="0 0 16 16" className='SpreadScene rr'>
+          {/* <rect x='0' y='0' width={16} height={16} stroke='red' fill='purple'></rect> */}
+          <g className="Spread rr"><text x={4} y={13.5} >V</text></g>
+          <g className="Spread rr"><text x={4} y={13.5} >V</text></g>
+          <g className="Spread rr"><text x={4} y={13.5} >V</text></g>
+        </svg>
       </div>
     </div>
   )

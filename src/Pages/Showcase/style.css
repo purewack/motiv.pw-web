@@ -2,7 +2,7 @@
     background-color: var(--cback);   
     margin-inline: auto;
     padding-inline: 2rem;
-    max-width: 80ch;
+    max-width: 90ch;
     font-size: 1.2rem;
 }
 
@@ -11,6 +11,10 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.Page.Showcase .Logo * {
+    /* outline: solid 1px cyan; */
 }
 
 .SplitCard.testcard img.cat1 {
