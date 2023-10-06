@@ -1,5 +1,6 @@
 import './style.css'
 import './style.hero.css'
+import './style.hello.css'
 
 import { useEffect, useRef, useState } from "react";
 import {Logo, LogoBar} from '../../Components/Logo/Logo'
@@ -41,21 +42,32 @@ export default function Main() {
     <div className="Main Page">
   
       <div id="opening" className="Hero" >
-          <div className="Title Box Grainy Card">
+          <div className="Slider Box Grainy Card">
             <header className='flex down center'>
               <Logo type="full" />
               <h2>P H O N I C</h2>
               <h2>W O R K S</h2>
+              <Logo />
               <img src={backLogo}/>
               <a href="#options" className="Scroller"><span>︾</span></a>
             </header>
-            <nav className='flex between'><Logo /></nav>
           </div>
+      </div>
+
+      <div className='Hello '>
+        <div className='Slider Card'>
+          <header className=''>
+            <h1>Hello</h1>
+          </header>
+          <nav className='flex between center'>
+            <Logo type='text' /><Logo />
+          </nav>
+        </div>
       </div>
 
       <div className='Content'>
           
-        <section className='Card Filler'>
+        <section className='Card Clean Filler'>
           <h1>Hello there ...</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc facilisis nec dui commodo vestibulum. Suspendisse pretium magna in lacus mollis dignissim. Nulla facilisi. Vivamus id accumsan lorem. Nam id sem gravida, suscipit orci eu, tempus justo. In cursus magna diam, et pharetra eros scelerisque quis. Aliquam posuere diam id ipsum consectetur mollis. Nullam quis sodales dolor, eu tincidunt sapien. Nam porta magna vitae tincidunt sagittis. Morbi porta tincidunt tellus, at pretium dui. Sed consequat risus a lorem bibendum, vitae malesuada odio volutpat. Suspendisse urna tellus, fringilla in egestas et, varius vel metus. Nunc libero nunc, commodo sit amet velit nec, commodo vehicula leo. Mauris maximus et dolor sodales vehicula. Vivamus sit amet imperdiet dolor, id facilisis est. Nullam non rhoncus urna, vehicula facilisis felis.
 

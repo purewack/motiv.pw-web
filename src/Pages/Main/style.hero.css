@@ -6,44 +6,29 @@
 .Page.Main .Hero {
     background-color: none;
     animation: kf-begin 1s 0.25s both;
-    position: sticky;
-    top: 0;
-    height: 200vh;
-    color: var(--cfore);
+    height: 220vh;
     z-index: 100;
+
+    --p1: min(var(--pscroll),1);
+
+    margin-bottom: calc(1rem * var(--p1));
+    margin-inline: calc(0.5rem * var(--p1));
 }
 
 
-.Page.Main .Title {
-    --nav: 4rem;
-    --sc: calc(min(1,max(var(--pscroll) - 0.9,0)));
-    --si: calc(1 - var(--sc));
+.Page.Main .Hero .Slider {
     border-radius: calc(min(var(--pscroll)*2 , 1) * 1rem);
-    height: calc((100vh - var(--sc) * (100vh - var(--nav)*1.5)) - 1rem);
 
     position: sticky;
-    top: calc(0.5rem * var(--si));
+    height: calc(100vh - (1rem * var(--p1)));
+    top: calc(0.5rem * var(--p1));
 
     display: grid;
-    grid-template-areas: "nav" "header";
-    grid-template-columns: 1fr;
     place-items: center;
-    grid-template-rows: var(--nav) auto;
 
     z-index: 1;
     
     background-color: var(--cback);
-}
-.Page.Main .Title header {
-    grid-area: header;
-}
-.Page.Main .Title nav {
-    grid-area: nav;
-    width: 100%;
-}
-.Page.Main .Title nav h3,
-.Page.Main .Title nav svg{
-    opacity: var(--sc);
 }
 
 
@@ -64,13 +49,11 @@
     transition: clip-path 500ms;
 }
 
-.Page.Main .Hero h2 {
-    mix-blend-mode: difference;
-    font-size: min(2rem, 4vw);
-}
 .Page.Main .Hero h2,
-.Page.Main .Hero .Logo.Icon svg {
-    opacity: max(0, calc( (var(--pscroll) * 2) - 1));
+.Page.Main .Hero svg {
+    mix-blend-mode: difference;
+    color: var(--cback);
+    font-size: min(2rem, 4vw);
 }
 
 

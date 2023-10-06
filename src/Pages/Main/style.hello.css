@@ -1,0 +1,36 @@
+.Page.Main .Hello {
+    margin-inline: 0.5rem;
+    height: 200vh;
+
+
+    background-color: var(--cprimary);
+
+    --p1: min(max(calc(var(--pscroll) - 3), 0),1);
+
+    --hh: calc((100vh - 3rem - var(--nav)) * (1 - var(--p1)));
+    
+    position: sticky;
+    top: calc((200vh - (var(--nav) * 1.75)) * -1);
+}
+
+.Page.Main .Hello .Slider {
+    height: calc(100vh - 1rem);
+    position: sticky;
+    top: 0.5rem;
+
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--hh) var(--nav);
+    grid-template-areas: "hello" "nav";
+
+    height: max-content;
+}
+
+.Page.Main .Hello .Slider > * {
+    overflow: hidden;
+}
+
+.Page.Main .Hello nav .Logo.Text {
+    font-size: 1rem;
+}

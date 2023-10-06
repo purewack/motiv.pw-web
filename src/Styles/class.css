@@ -57,6 +57,9 @@
   font-size: 1.25rem;
   padding: 1rem;
 }
+.Card.Clean {
+  border: none;
+}
 
 .Grainy { 
   background-image: url('./noise.svg');

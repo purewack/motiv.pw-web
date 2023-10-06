@@ -6,11 +6,8 @@ body:has(.Page.Main){
 .Page.Main {
     background-color: var(--cprimary);
     counter-reset: titles;
-    min-height: 300vh;
-    /* display: grid; */
-    gap:1rem;
-    padding:0;
-    padding-inline: 0.5rem;
+    min-height: 200vh;
+    --nav: 4rem;
 }
 /* .Page.Main * {
     transition: transform 0.4s;
@@ -23,6 +20,7 @@ body:has(.Page.Main){
 
 .Page.Main .Content{
     padding: 1rem;
+	min-height: calc(100vh - (var(--nav) * 1.5));
 }
 
 /*
