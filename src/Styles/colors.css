@@ -1,12 +1,12 @@
 
 :root {
     --cfore: #18181a;
-    --cback: rgb(252, 248, 241);
-    --chidden: rgb(132, 187, 115);
-    --caccent: #6bb426;
-    --cprimary:#3e7e2e;
-    --csecondary: #d7eeda;
-    --cneutral:#faf0dd;
+    --cback: rgb(255, 255, 255);
+    --chidden: rgb(94, 120, 85);
+    --caccent: #b3fd6e;
+    --cprimary:#d8fecf;
+    --csecondary: #98f1e8;
+    --cneutral:#feffe7;
     --cneutral2: #749e76;
   
     --b1filler:rgb(255, 255, 255);
@@ -16,6 +16,6 @@
     --b2accent:#abd8cd;
     --b3accent:#e7c1db;
     --bgc:black;
-    --text:#EDE3E4;
+    --text:#f6edee;
   }
   

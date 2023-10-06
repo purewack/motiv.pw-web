@@ -1,7 +1,8 @@
 import "./style.css"
 
 export function Logo({ type='icon', className = ""}) {
-  return type === 'backed' ? (
+  return <>
+  {type === 'backed' && 
     <div className={"Logo Backed " + className}>
       <div className='Container'>
         <h1 className="Main">{children}</h1>
@@ -19,11 +20,9 @@ export function Logo({ type='icon', className = ""}) {
         ))}
       </div>
     </div>
-  )
- 
-  :
- 
-  type === 'full' ? ( 
+  }
+
+  {type === 'full' && ( 
     <div className="Logo Sidefan">
       <div className='Wrap ll'>
         <svg viewBox="0 0 12 16"  className='SpreadScene ll'>
@@ -50,17 +49,19 @@ export function Logo({ type='icon', className = ""}) {
         </svg>
       </div>
     </div>
-  )
+  )}
 
-  : (
-    <div className='Logo Icon'>
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
-        <path d="M 0 200 L 125 200 C 166.421 200 200 166.421 200 125 L 200 0"/>
-        <path d="M 0 325 L 203.125 325 C 270.434 325 325 270.434 325 203.125 L 325 0"/>
-        <path d="M 0 450 L 281.25 450 C 374.448 450 450 374.448 450 281.25 L 450 0"/>
-      </svg>
-    </div>
-  );
+  {type === "text" && <h3 className="Logo Text">M O T I V</h3>}
+
+  {type === "icon" && <div className='Logo Icon'>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+      <path d="M 0 200 L 125 200 C 166.421 200 200 166.421 200 125 L 200 0"/>
+      <path d="M 0 325 L 203.125 325 C 270.434 325 325 270.434 325 203.125 L 325 0"/>
+      <path d="M 0 450 L 281.25 450 C 374.448 450 450 374.448 450 281.25 L 450 0"/>
+    </svg>
+  </div>}
+  
+  </> 
 }
 
 export function LogoBar({ id, className, text }) {

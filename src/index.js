@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 
 // import "./Styles/debug.css";
+import "./Styles/layout.css";
 import "./Styles/class.css";
 import "./Styles/noclass.css";
 import "./Styles/colors.css";

@@ -1,4 +1,3 @@
-
 #root {
   background: white;
   color: var(--cmain);
@@ -30,45 +29,10 @@
   opacity: 0.5;
 }
 
-.Nav, .Footer {
-  position: sticky;
-  top: var(--bb);
-  width:100%;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  min-height: 4rem;
-  z-index: 9;
-  padding-inline: var(--bb);
-}
-.Nav {
-  opacity: min(var(--pscroll),1);
-  filter: drop-shadow(0 0 10px black);
-}
-.Footer {
-  z-index: 0;
-  border: none;
-  background: var(--csecondary);
-}
-
 .Page {
   min-height: 100vh;
   min-height: 100dvh;
   /* padding-inline: var(--bb); */
-}
-
-/* .Page:after,
-.Page:before {
-  content: "";
-  pointer-events: none;
-  position: fixed;
-  inset: 0;
-  z-index: 10;
-  border: solid var(--cprimary) var(--bb);
-}  */
-.Page:before{
-  z-index: 11;
-  border-radius: 0;
 }
 
 .Wide {
@@ -76,10 +40,10 @@
   letter-spacing: 1.7rem;
 }
 
-.Box {
+.box-shadow {
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }
-.Box.Inner {
+.box-shadow.inner {
   box-shadow: inset 0 0 20px gray;
 }
 
@@ -87,11 +51,13 @@
   color: var(--cmain);
   background-color: var(--cneutral);
   border-radius: 1rem;
+  border: solid lightgray 1px;
   overflow: hidden;
-/* contrast(170%) brightness(1000%); */
+  line-height: 1.25;
+  font-size: 1.25rem;
+  padding: 1rem;
 }
 
-.Card,
 .Grainy { 
   background-image: url('./noise.svg');
   background-blend-mode: multiply;

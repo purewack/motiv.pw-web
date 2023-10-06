@@ -66,7 +66,7 @@ summary > * {
   display: inline-block;
 }
 
-:is(button, input:is([type="submit"], [type="button"])){
+/* :is(button, input:is([type="submit"], [type="button"])){
   font-family: "Josefin Sans", sans-serif;
   background-color: transparent;
   color:var(--cmain);
@@ -93,38 +93,79 @@ input:is([type="submit"]){
 
 :is(button, input[type="submit"], input[type="button"]):hover{
   background-color: var(--csub);
+} */
+
+button {
+  --theme: rgb(48, 69, 131);
+  --themelight: rgb(41, 104, 192);
+  --themetext: white;
+  --rr: 1rem;
+  --dt: 0.2s; 
+  font-size: 1.25rem;
+  font-family: 'Josefin Sans', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+
+  --margin: calc(var(--rr)*2);
+  margin-bottom: var(--margin);
+  margin-right: var(--margin);
+  padding: 1rem;
+  
+  background: var(--theme);
+  color: var(--themetext);
+
+  border: none;
+  border-radius: calc(var(--rr)/3);
+
+  position: relative;
+  transition: all var(--dt) calc(var(--dt) * 2), background-color var(--dt) var(--dt);
+}
+button:hover {
+  --theme: var(--themelight);
+  background: var(--themelight);
+  border-radius: 0 0 var(--rr) 0;
+  transition: all var(--dt), background-color var(--dt) var(--dt);
 }
 
-button{
-  position: relative;
-  --theme: var(--csecondary);
-  background: var(--theme);
-}
-button::before,
-button::after
-{
-  content: '';
+
+button:after,
+button:before{
+  content:'';
+  --th: calc(var(--rr)/4);
+  border: solid var(--theme) var(--th);
+  border-left: none;
+  border-top: none;
+  
   position:absolute;
-  top:0;
-  left:0;
-  display: inline-block;
-  width: calc(100% + 2px);
-  height: calc(100% + 2px);
-  opacity: 0;
-  transition: width 0.3s, height 0.3s, opacity 1s;
+  inset: 0;
+  left: 50%;
+  top: 50%;
+  --off: calc(-0.5*var(--rr));
+  transition: all var(--dt), border-color var(--dt) var(--dt);
 }
-button:hover::after,
-button:hover::before {
-  opacity: 1;
+button:after{
+  border-radius: 0 0 calc(var(--rr)*1.33) 0;
 }
-button:hover::before {
-  width: calc(100% + 6px);
-  height: calc(100% + 6px);
+button:after{
+  transition: all var(--dt) var(--dt), border-color var(--dt) var(--dt);
 }
-button:hover::after {
-  width: calc(100% + 10px);
-  height: calc(100% + 10px);
+button:before {
+  --off: calc(-1*var(--rr)); 
+  border-radius: 0 0 calc(var(--rr)*1.7) 0;
 }
+button:hover:after,
+button:hover:before{
+  top: 0;
+  left: 0;
+  bottom: var(--off);
+  right: var(--off);
+  border-color: var(--themelight);
+  transition: all var(--dt) var(--dt);
+}
+button:hover:before {
+  transition: all var(--dt) calc(var(--dt) * 2), border-color var(--dt) var(--dt);
+}
+
 
 /* width */
 ::-webkit-scrollbar {

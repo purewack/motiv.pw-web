@@ -1,0 +1,97 @@
+
+@keyframes kf-begin {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+.Page.Main .Hero {
+    background-color: none;
+    animation: kf-begin 1s 0.25s both;
+    position: sticky;
+    top: 0;
+    height: 200vh;
+    color: var(--cfore);
+    z-index: 100;
+}
+
+
+.Page.Main .Title {
+    --nav: 4rem;
+    --sc: calc(min(1,max(var(--pscroll) - 0.9,0)));
+    --si: calc(1 - var(--sc));
+    border-radius: calc(min(var(--pscroll)*2 , 1) * 1rem);
+    height: calc((100vh - var(--sc) * (100vh - var(--nav)*1.5)) - 1rem);
+
+    position: sticky;
+    top: calc(0.5rem * var(--si));
+
+    display: grid;
+    grid-template-areas: "nav" "header";
+    grid-template-columns: 1fr;
+    place-items: center;
+    grid-template-rows: var(--nav) auto;
+
+    z-index: 1;
+    
+    background-color: var(--cback);
+}
+.Page.Main .Title header {
+    grid-area: header;
+}
+.Page.Main .Title nav {
+    grid-area: nav;
+    width: 100%;
+}
+.Page.Main .Title nav h3,
+.Page.Main .Title nav svg{
+    opacity: var(--sc);
+}
+
+
+.Page.Main .Logo.Sidefan{
+    display: inline-block;
+    z-index: 1;
+}
+
+.Page.Main .Logo.Sidefan{
+    filter:drop-shadow(0 0 10px gray);
+}
+
+.Page.Main .Hero img{
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    clip-path: circle(calc(max(calc(0.5 - var(--pscroll)), 0) * 200%));
+    transition: clip-path 500ms;
+}
+
+.Page.Main .Hero h2 {
+    mix-blend-mode: difference;
+    font-size: min(2rem, 4vw);
+}
+.Page.Main .Hero h2,
+.Page.Main .Hero .Logo.Icon svg {
+    opacity: max(0, calc( (var(--pscroll) * 2) - 1));
+}
+
+
+.Page.Main .Scroller{
+    position: absolute;
+    left:0;
+    right: 0;
+    display: block;
+    text-align: center;
+    bottom: 0;
+    color: var(--cback);
+    mix-blend-mode: difference;
+    font-size: 4rem;
+    --pstart: max(0, calc(1 - var(--pscroll)));
+    opacity: calc(var(--pstart));
+}
+.Page.Main .Scroller:hover{
+    animation: kf-hover 0.75s infinite alternate;
+}
+@keyframes kf-hover {
+    from {transform: translateY(0);}
+    80% {transform: translateY(1rem);}
+    to {transform: translateY(1rem);}
+}

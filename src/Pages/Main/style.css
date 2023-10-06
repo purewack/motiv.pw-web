@@ -1,96 +1,31 @@
-html:has(.Page.Main) {
-    scroll-behavior: smooth;
+
+body:has(.Page.Main){
+    background-color: var(--cprimary);
 }
 
 .Page.Main {
     background-color: var(--cprimary);
     counter-reset: titles;
-    /* padding: var(--bb); */
-    display: grid;
+    min-height: 300vh;
+    /* display: grid; */
     gap:1rem;
+    padding:0;
+    padding-inline: 0.5rem;
 }
-.Page.Main * {
+/* .Page.Main * {
     transition: transform 0.4s;
-}
+} */
 
 .Page.Main a {
 	font: inherit;
 	color: inherit;
 }
 
-.Card {
-    margin-inline: var(--bb);
+.Page.Main .Content{
+    padding: 1rem;
 }
 
-.Page.Main .Home::before {
-    font-family: inherit;
-}
-
-.Page.Main .HeadingScrollContainer {
-    height: 200vh;
-    position: relative;
-}
-.Page.Main .HeadingContainer {
-    max-width: 100vw;
-    height: calc(100vh - var(--bb)*2);
-    /* overflow: hidden; */
-    display: flex;
-    position: sticky;
-    top: var(--bb);
-    background-color: var(--cback);
-}
-
-@media only screen and (min-width: 1001px) {
-    .Page.Main .HeadingContainer:nth-child(1) .Heading{
-        --pstart: 1.6;
-        --off: calc((max(var(--pscroll),var(--pstart)) - var(--pstart))*10rem);
-        transform: translateX(var(--off));
-    }
-}
-/* .Page.Main .HeadingContainer:nth-child(2) .Heading{
-    transform: translateX(calc(min(var(--pscroll),1.5)*10%));
-} */
-
-.Page.Main .Heading {
-    padding: 3rem;
-    display: flex;
-    flex-direction: column;
-    z-index: 10;
-}
-.Page.Main .Heading a:first-child{
-    margin-top: auto;
-} 
-.Page.Main .Heading .HeaderTitle {
-    font-size: min(10vh, 12vw);
-}
-.Page.Main .Heading .HeaderTitle:hover {
-    /* text-decoration: underline double; */
-    transform: translateX(1rem);
-}
-.Page.Main .Heading .HeaderTitle::after {
-    counter-increment: titles;
-    content: counter(titles);
-    font-style: italic;
-    font-weight: 200;
-    vertical-align: super;
-    font-size: min(5vh, 3vw);
-    position: relative;
-    left: -2px;
-}
-
-.Page.Main .Heading[data-selected="music"] a:nth-child(1) {
-    /* color: var(--cprimary); */
-    text-decoration: underline;
-}
-.Page.Main .Heading[data-selected="work"] a:nth-child(2) {
-    /* color: var(--cprimary); */
-    text-decoration: underline;
-}
-.Page.Main .Heading[data-selected="me"] a:nth-child(3) {
-    /* color: var(--cprimary); */
-    text-decoration: underline;
-}
-
+/*
 .Page.Main .PersonalIntro  {
     display: flex;
     flex-direction: column;
@@ -100,6 +35,7 @@ html:has(.Page.Main) {
     position: relative;
     overflow: hidden;
 }
+
 .Page.Main .PersonalIntro .Who {
 	z-index: 9;
 	mix-blend-mode: difference;
@@ -115,14 +51,6 @@ html:has(.Page.Main) {
     top:50%;
     transform: translateY(-50%);
 }
-/* .Page.Main .PersonalIntro .Who::before {
-    content: '⦃';
-    right: 110%;
-}
-.Page.Main .PersonalIntro .Who::after {
-    content: '⦄';
-    left: 110%;
-} */
 
 .Page.Main .Who h1 {
 	font-size: 2rem;
@@ -131,7 +59,7 @@ html:has(.Page.Main) {
 }
 .Page.Main .Who p {
 	text-align: center;
-}
+} */
 .Page.Main .PersonalIntro .Bars {
     perspective: 1000px;
     position: absolute;
@@ -204,153 +132,4 @@ html:has(.Page.Main) {
 @keyframes kf-bar3{
 	from{transform:translateX(-50rem) rotateY(30deg) rotateX(0deg)}
 	to{transform:translateX(-20rem) rotateY(30deg) rotateX(360deg)}
-}
-
-
-
-
-
-.Page.Main .Singles {
-	height: 100vh;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	font-size: 3rem;
-} 
-.Page.Main .Singles ol {
-	font-size: 2rem;
-	list-style: none;
-	counter-reset: item;
-}
-.Page.Main .Singles li {
-	counter-increment: item;
-	margin-bottom: 5px;
-	font: inherit;
-    margin-block: 1rem;
-    transition: scale 0.33s;
-}
-.Page.Main .Singles li:hover{
-    scale: 1.2;
-}
-.Page.Main .Singles li:before {
-	font: inherit;
-	margin-right: 10px;
-	content: counter(item);
-	background: var(--cprimary);
-	border-radius: 100%;
-	color: white;
-	width: 1.2em;
-	text-align: center;
-	display: inline-block;
-}
-
-.Page.Main .Songs {
-    counter-reset: songs;
-    display: grid;
-    gap:1rem;
-    padding: 1rem;
-    margin: 0;
-}
-.Page.Main .SongContainer{
-    height: 200vh;
-    position: relative;
-}
-.Page.Main .Song {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    width:100%;
-    display: grid;
-    grid-template-areas: 'main info';
-    grid-template-columns: auto 0%;
-    transition: grid-template-columns 700ms;
-    transition-delay: 250ms;
-    overflow: hidden;
-}
-.Page.Main .Song.info {
-    grid-template-columns: auto 30vw;
-}
-
-.Page.Main .Song .Description {
-    grid-area: info;
-    /* opacity: 0; */
-    /* transition: opacity 400ms; */
-    position: relative;
-    padding-block: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    z-index: 2;
-}
-
-.Page.Main .Song .DescriptionContent{
-    overflow-x: hidden;
-    overflow-y:scroll;
-    width: 30vw;
-    min-height: 50vh;
-    max-height: 70vh;
-    min-width: 0;
-    padding:1rem;
-    transform: translateX(-1rem);
-}
-.Page.Main .Song .Preview{
-    grid-area: main;
-    counter-increment: songs;
-    max-height: 100vh;
-    max-width: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 3;
-    cursor: pointer;
-}
-.Page.Main .Song .Preview :is(video, iframe) {
-    transition: 500ms; 
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-} 
-.Page.Main .Test {
-    background-color: pink;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-/* 
-.Page.Main .Song .Preview :is(video, iframe).Transition {
-    filter: brightness(1.5);
-}  */
-.Page.Main .Song.info .Preview :is(video, iframe)  {
-    height: 90%;
-    width:90%;
-    border-radius: 1rem;
-}
-.Page.Main .Preview.full :is(video, iframe)  {
-    object-fit: contain;
-    background-color: black;
-    z-index: 1;
-}   
-.Preview.Empty {
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background: repeating-linear-gradient( -45deg, #155101, #155101 5px, #e5e5f7 5px, #e5e5f7 25px );
-}
-
-.Page.Main .Preview:not(.full)::before {
-    content: counter(songs);
-    font-size: 3rem;
-    position: absolute;
-    top:var(--bbb);
-    left:calc(var(--bbb)/2);
-    background-color: var(--cprimary);
-    color: white;
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 1;
 }
