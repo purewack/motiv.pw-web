@@ -57,7 +57,14 @@ export default function Main() {
       <div className='Hello '>
         <div className='Slider Card'>
           <header className=''>
-            <h1>Hello</h1>
+            <div className='Bars'>
+              <LogoBar className="Bar1" text={"M O T I V - P W -"} />
+              <LogoBar className="Bar2" text={"M O T I V - P W -"} />
+              <LogoBar className="Bar3" text={"M O T I V - P W -"} />
+            </div>
+            <div className='Who flex down center middle'>
+              <h1 className=''>H E L L <span className='HeadingFont'>O</span></h1>
+            </div>
           </header>
           <nav className='flex between center'>
             <Logo type='text' /><Logo />
@@ -86,9 +93,6 @@ export default function Main() {
               {who}
             </div>
             <div className="Bars">
-            <LogoBar className="Bar1" text={"M O T I V - P W -"} />
-            <LogoBar className="Bar2" text={"M O T I V - P W -"} />
-            <LogoBar className="Bar3" text={"M O T I V - P W -"} />
             </div>
           </div>
         </header>

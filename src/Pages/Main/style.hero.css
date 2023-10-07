@@ -32,12 +32,13 @@
 }
 
 
-.Page.Main .Logo.Sidefan{
+.Page.Main .Hero .Logo.Sidefan{
     display: inline-block;
     z-index: 1;
+    --unit: 12vw;
 }
 
-.Page.Main .Logo.Sidefan{
+.Page.Main .Hero .Logo.Sidefan{
     filter:drop-shadow(0 0 10px gray);
 }
 
@@ -66,7 +67,7 @@
     bottom: 0;
     color: var(--cback);
     mix-blend-mode: difference;
-    font-size: 4rem;
+    font-size: min(4rem,10vmin);
     --pstart: max(0, calc(1 - var(--pscroll)));
     opacity: calc(var(--pstart));
 }

@@ -116,14 +116,16 @@
 .Logo.Icon {
   min-height: 2rem;
   max-height: 6rem;
+  display: grid;
+  place-items: center;
 }
 
 .Logo.Icon svg{
   fill: none;
   stroke-width: 60px;
   stroke: black;
-
-  height: 2rem;
+  
+  height: min(5vmin, 2rem);
 
   stroke: white;
   mix-blend-mode: difference;

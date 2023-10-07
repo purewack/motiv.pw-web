@@ -7,7 +7,7 @@ body:has(.Page.Main){
     background-color: var(--cprimary);
     counter-reset: titles;
     min-height: 200vh;
-    --nav: 4rem;
+    --nav: max(2rem, 7vh);
 }
 /* .Page.Main * {
     transition: transform 0.4s;
@@ -20,7 +20,7 @@ body:has(.Page.Main){
 
 .Page.Main .Content{
     padding: 1rem;
-	min-height: calc(100vh - (var(--nav) * 1.5));
+	min-height: calc(100vh - (var(--nav) + 2rem));
 }
 
 /*
@@ -58,76 +58,3 @@ body:has(.Page.Main){
 .Page.Main .Who p {
 	text-align: center;
 } */
-.Page.Main .PersonalIntro .Bars {
-    perspective: 1000px;
-    position: absolute;
-    inset:0;
-    width: 100%;
-    height: 100%;
-		z-index: 8;
-
-		--pstart:2.75;
-		--bscroll: max(calc(var(--pscroll) - var(--pstart)),0);
-		filter: blur(calc(10px * min(var(--bscroll) , 1)));
-		transition: filter 0.2s;
-}
-.Page.Main .Bar div{
-	font-family: inherit;
-	vertical-align: middle;
-	line-height: 1;
-	font-size: 3rem;
-}
-.Bar1{
-	transform-style: preserve-3d;
-	transform: translateX(-50rem) translateY(-50rem) translateZ(-2000px)  rotateZ(60deg) ;
-	--filler: var(--b1filler);
-	--accent: var(--b1accent);
-}
-.Bar1 > .object{
-	animation-name:kf-bar1;
-	animation-duration: 20s;
-	animation-direction:alternate;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count:infinite;
-	
-}
-@keyframes kf-bar1{
-	from{transform:translateX(-70vw) rotateY(30deg) rotateX(0deg)}
-	to{transform:translateX(-30vw) rotateY(30deg) rotateX(360deg)}
-}
-
-.Bar2{
-	transform-style: preserve-3d;
-	transform:translateY(20rem) translateX(-50rem) translateZ(-1000px) rotateZ(-45deg);
-	--filler: var(--b2filler);
-	--accent: var(--b2accent);
-}
-.Bar2 > .object{
-	animation-name:kf-bar2;
-	animation-duration: 16s;
-	animation-direction:alternate;
-	animation-timing-function: ease-in-out;
-	animation-iteration-count:infinite;
-}
-@keyframes kf-bar2{
-	from{transform:translateX(-50rem) rotateY(30deg) rotateX(0deg)}
-	to{transform:translateX(-100rem) rotateY(30deg) rotateX(360deg)}
-}
-
-.Bar3{
-	transform-style: preserve-3d;
-	transform:translateY(50vh) translateZ(0) rotateZ(20deg);
-	--filler: var(--b3filler);
-	--accent: var(--b3accent);
-}
-.Bar3 > .object{
-	animation-name:kf-bar3;
-	animation-duration: 8s;
-	animation-timing-function: ease-in-out;
-	animation-direction:alternate;
-	animation-iteration-count:infinite;
-}
-@keyframes kf-bar3{
-	from{transform:translateX(-50rem) rotateY(30deg) rotateX(0deg)}
-	to{transform:translateX(-20rem) rotateY(30deg) rotateX(360deg)}
-}

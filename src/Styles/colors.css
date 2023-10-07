@@ -11,11 +11,9 @@
   
     --b1filler:rgb(255, 255, 255);
     --b2filler:rgb(255, 255, 255);
-    --b3filler:#79856a;
-    --b1accent:#d1b296;
+    --b3filler:#ffffff;
+    --b1accent:#9bd5ff;
     --b2accent:#abd8cd;
-    --b3accent:#e7c1db;
-    --bgc:black;
-    --text:#f6edee;
+    --b3accent:#e2cfff;
   }
   
