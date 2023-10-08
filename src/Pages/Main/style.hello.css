@@ -1,36 +1,36 @@
 .Page.Main .Hello {
-    margin-inline: 0.5rem;
     height: 200vh;
-
 
     background-color: var(--cprimary);
 
-    --p1: min(max(calc(var(--pscroll) - 3), 0),1);
+    --p1: min(max(calc(var(--pscroll) - 3.15), 0),1);
 
-    --hh: calc((100vh - (var(--nav) + 1.5rem)) * (1 - var(--p1)));
+    --hh: calc((100vh - (var(--nav) + 2rem)) * (1 - var(--p1)));
     
     position: sticky;
     top: calc((200vh - (var(--nav) + 1.25rem)) * -1);
 }
-.Page.Main .Hello::after {
+.Page.Main .Hello nav::after {
     content: '';
 
     position: absolute;
     top: 100%;
     left: -0.5rem;
+    z-index: 100;
 
     background-image: linear-gradient(180deg, var(--cprimary) 0%, transparent 100%);
     width: 100vw;
-    height: 1rem;
+    height: 0.5rem;
 }
 
 .Page.Main .Hello .Slider {
+    margin-inline: 0.5rem;
     height: calc(100vh - 1rem);
     position: sticky;
     top: 0.5rem;
 
     padding: 0;
-
+    overflow: visible;
 
     display: grid;
     grid-template-columns: 1fr;
@@ -50,11 +50,18 @@
     font-size: 1rem;
 }
 
+.Page.Main .Hello header {
+	--grad: linear-gradient(0,transparent 0%, white 4rem, white calc(100% - 4rem), transparent 100%);
+}
+
 .Page.Main .Hello .Who {
     overflow: hidden;
     position: absolute;
     inset: 0;
     grid-area: hello;
+
+	mask-image: var(--grad);
+	-webkit-mask-image: var(--grad);
 }
 
 .Page.Main .Hello .Who h1{
@@ -62,11 +69,24 @@
     font-size: var(--size);
     color: var(--cprimary);
 }
+.Page.Main .Hello .Who .Details{
+    color: var(--cprimary-800);
+    font-size: 3vmin;
+    text-align: center;
+}
+.Page.Main .Hello .Who .Details h2{
+    font-size: 8vmin;
+    font-family: inherit;
+}
+.Page.Main .Hello .Who .Details h2 span {
+    color: var(--cprimary-900);
+    font-family: inherit;
+}
 
-.Page.Main .Hello .Who span{
+.Page.Main .Hello .Who h1 span{
     position: relative;
 }
-.Page.Main .Hello .Who span::after{
+.Page.Main .Hello .Who h1 span::after{
     user-select: none;
     content: ': )';
     font-weight: bold;
@@ -76,6 +96,7 @@
     left: 52%;
     transform: translate(-50%, -50%) rotate(90deg);
     font-size: calc(var(--size) * 0.3);
+    font-family: Arial;
 }
 .Page.Main .Hello .Who h1:hover span::after {
     content: '; )';
@@ -86,7 +107,6 @@
 	grid-area: hello;
 	height: 100%;
 
-	--grad: linear-gradient(0,transparent 0%, white 4rem, white calc(100% - 4rem), transparent 100%);
 	mask-image: var(--grad);
 	-webkit-mask-image: var(--grad);
 }

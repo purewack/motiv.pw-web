@@ -3,11 +3,13 @@
     --cfore: #18181a;
     --cback: rgb(255, 255, 255);
     --chidden: rgb(94, 120, 85);
-    --caccent: #b3fd6e;
-    --cprimary:#b1f9a1;
+    --caccent: #20ca02;
+    --cprimary:#b9fab1;
+    --cprimary-100:#dbffd2;
+    --cprimary-800: #749e76;
+    --cprimary-900:#114f02;
     --csecondary: #98f1e8;
-    --cneutral:#f3ffef;
-    --cneutral2: #749e76;
+    --cneutral:#ffffff90;
   
     --b1filler:rgb(255, 255, 255);
     --b2filler:rgb(255, 255, 255);

@@ -1,6 +1,7 @@
 
 body:has(.Page.Main){
     background-color: var(--cprimary);
+    overflow-x: hidden;
 }
 
 .Page.Main {
@@ -19,9 +20,40 @@ body:has(.Page.Main){
 }
 
 .Page.Main .Content{
-    padding: 1rem;
-	min-height: calc(100vh - (var(--nav) + 2rem));
+    min-height: calc(100vh - (var(--nav) + 2rem));
+    display: grid;
+    grid-template-columns: 1.25rem 1fr 1.25rem;
+    grid-template-areas: "border-left content border-right";
+    justify-items: center;
 }
+.Page.Main .Content .BorderLogo {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-weight: bold;
+    color: var(--cprimary-100);
+}
+.Page.Main .Content .BorderLogo:first-child {
+    grid-area: border-left;
+}
+.Page.Main .Content :not(.BorderLogo){
+    grid-area: content;
+} 
+
+.Page.Main .Article {
+    max-width: 80ch;
+    letter-spacing: 0.125rem;
+    font-size: 1.25rem;
+    color:var(--cprimary-900);
+}
+
+.Page.Main .Article .Title {
+    text-transform: unset;
+    /* font-style: italic; */
+    font-size: 6rem;
+    color: var(--cprimary-800);
+}
+
+
 
 /*
 .Page.Main .PersonalIntro  {

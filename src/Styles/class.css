@@ -40,6 +40,12 @@
   letter-spacing: 1.7rem;
 }
 
+.TextOutline {
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  color: transparent;
+}
+
 .box-shadow {
   box-shadow: 0 10px 40px rgba(0,0,0,0.4);
 }

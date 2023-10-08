@@ -69,7 +69,7 @@ export function LogoBar({ id, className, text }) {
 
   return (
     <div id={id} className={className}>
-      <div className="object Bar HeadingFont">
+      <div className="object Bar Font Heading">
         <div className="face">{longText}</div>
         <div className="face">{longText}</div>
         <div className="face">{longText}</div>

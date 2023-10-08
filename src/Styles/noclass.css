@@ -1,26 +1,32 @@
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Roboto:ital,wght@0,100;0,300;1,100;1,300&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
-
-.NoMainFont, .AltFont, .PseudoAltFont::after, .PseudoAltFont::before{
+/* @import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Croissant+One&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:wght@300;400;500&family=Young+Serif&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bacasime+Antique&family=Croissant+One&family=Dosis:wght@200;300;400;500;600;700;800&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Young+Serif&display=swap');
+.Font.Alt2{
+  font-family: 'Croissant One', cursive;
+}
+.Font.Alt{
   font-family: 'Bacasime Antique', serif;
 }
-*, *::after, *::before{
-  font-family: 'Roboto', sans-serif;
+.Font.Fancy{
+  font-family: 'Young Serif', serif;
+}
+*, *::after, *::before, .Font.Body{
+  font-family: 'Dosis', sans-serif;
   /* border-radius: 1rem; */
 }
-
-span, p, div, section {
-  line-height: 1.75;
-  /* font-style: italic; */
-}
-h1, h2, h3, h4, h5, h6, .HeadingFont {
+h1, h2, h3, h4, h5, h6, .Font.Heading {
   font-family: "Josefin Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
   text-transform: uppercase;
 }
+span, p, div, section {
+  line-height: 1.75;
+  /* font-style: italic; */
+}
+.Font.More {
+  font-weight: 500;
+}
+
 
 h1 {
   font-size: 3rem;

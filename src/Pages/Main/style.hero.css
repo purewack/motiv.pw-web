@@ -35,7 +35,8 @@
 .Page.Main .Hero .Logo.Sidefan{
     display: inline-block;
     z-index: 1;
-    --unit: 12vw;
+    --unit: 14vw;
+    margin:0;
 }
 
 .Page.Main .Hero .Logo.Sidefan{
