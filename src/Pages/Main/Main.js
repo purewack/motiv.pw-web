@@ -1,11 +1,7 @@
-import './style.css'
-import './style.hero.css'
-import './style.hello.css'
-
 import { useEffect, useRef, useState } from "react";
-import {Logo, LogoBar} from '../../Components/Logo/Logo'
+import {Logo, LogoBar} from '../../Components/Logo/Logo.js'
 
-import backLogo from '../../Media/back3_low.jpg'
+// import backLogo from '@/Media/back3_low.jpg'
 
 import who from '../../Contents/who.jsx'
 
@@ -29,7 +25,7 @@ export default function Main() {
               <h2>P H O N I C</h2>
               <h2>W O R K S</h2>
               <Logo />
-              <img src={backLogo}/>
+              {/* <img src={backLogo}/> */}
               <a href="#options" className="Scroller"><span>︾</span></a>
             </header>
           </div>
