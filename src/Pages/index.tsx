@@ -1,15 +1,14 @@
 import { useEffect, useRef, useState } from "react";
-import {Logo, LogoBar} from '../../Components/Logo/Logo.js'
+import {Logo, LogoBar} from '@/Components/Logo'
+import backLogo from 'public/Media/back3_low.jpg'
 
-// import backLogo from '@/Media/back3_low.jpg'
-
-import who from '../../Contents/who.jsx'
-
+import who from 'src/Contents/who.jsx'
+import Image from "next/image";
 
 const longText = "M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - "
 
 
-export default function Main() {
+export default function MainPage() {
 
   // let { id } = useParams();
 
@@ -25,7 +24,7 @@ export default function Main() {
               <h2>P H O N I C</h2>
               <h2>W O R K S</h2>
               <Logo />
-              {/* <img src={backLogo}/> */}
+              <Image alt='main background' src={backLogo}/>
               <a href="#options" className="Scroller"><span>︾</span></a>
             </header>
           </div>
@@ -35,9 +34,9 @@ export default function Main() {
         <div className='Slider Card '>
           <header className=''>
             <div className='Bars Font Heading'>
-              <LogoBar className="Bar1" text={"M O T I V - P W -"} />
-              <LogoBar className="Bar2" text={"M O T I V - P W -"} />
-              <LogoBar className="Bar3" text={"M O T I V - P W -"} />
+              <LogoBar id='logoBarA' className="Bar1" text={"M O T I V - P W -"} />
+              <LogoBar id='logoBarB' className="Bar2" text={"M O T I V - P W -"} />
+              <LogoBar id='logoBarC' className="Bar3" text={"M O T I V - P W -"} />
             </div>
             <div className='Who flex down center middle'>
               <h1 className=''>H E L L <span className='Font Heading'>O</span></h1>
