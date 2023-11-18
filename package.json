@@ -4,15 +4,19 @@
   "description": "",
   "keywords": [],
   "dependencies": {
-    "next": "^14.0.2",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "clsx": "^2.0.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.0.2",
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {
-    "@types/node": "^20.9.1",
-    "@types/react": "^18.2.37",
-    "typescript": "^5.2.2"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.2"
   },
   "scripts": {
     "dev": "next dev",

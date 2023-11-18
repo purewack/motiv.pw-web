@@ -1,9 +1,9 @@
-// import "./style.css"
+import clsx from "clsx";
 
 export function Logo({ type='icon', className = ""}) {
   return <>
   {type === 'backed' && 
-    <div className={"Logo Backed " + className}>
+    <div className={clsx(['Logo', 'Backed', className])}>
       <div className='Container'>
         <h1 className="Main">{children}</h1>
         {[...Array(5)].map((v, i) => (
@@ -23,7 +23,7 @@ export function Logo({ type='icon', className = ""}) {
   }
 
   {type === 'full' && ( 
-    <div className="Logo Sidefan">
+    <div className={clsx(['Logo', 'Sidefan', className])}>
       <div className='Wrap ll'>
         <svg viewBox="0 0 12 16"  className='SpreadScene ll'>
           {/* <rect x='0' y='0' width={12} height={16} stroke='red' fill='purple'></rect> */}
@@ -51,9 +51,9 @@ export function Logo({ type='icon', className = ""}) {
     </div>
   )}
 
-  {type === "text" && <h3 className="Logo Text">M O T I V</h3>}
+  {type === "text" && <h3 className={clsx(['Logo', 'Text', className])}>M O T I V</h3>}
 
-  {type === "icon" && <div className='Logo Icon'>
+  {type === "icon" && <div className={clsx(['Logo', 'Icon', className])}>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
       <path d="M 0 200 L 125 200 C 166.421 200 200 166.421 200 125 L 200 0"/>
       <path d="M 0 325 L 203.125 325 C 270.434 325 325 270.434 325 203.125 L 325 0"/>
@@ -68,7 +68,7 @@ export function LogoBar({ id, className, text }) {
   const longText = [...Array(40).fill(text + " ")];
 
   return (
-    <div id={id} className={className}>
+    <div id={id} className={clsx(['LogoBar', className])}>
       <div className="object Bar Font Heading">
         <div className="face">{longText}</div>
         <div className="face">{longText}</div>

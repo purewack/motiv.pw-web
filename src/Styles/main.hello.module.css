@@ -1,4 +1,4 @@
-.Page.Main .Hello {
+.Hello {
     height: 200vh;
 
     background-color: var(--cprimary);
@@ -10,7 +10,7 @@
     position: sticky;
     top: calc((200vh - (var(--nav) + 1.25rem)) * -1);
 }
-.Page.Main .Hello nav::after {
+.Hello nav::after {
     content: '';
 
     position: absolute;
@@ -23,7 +23,7 @@
     height: 0.5rem;
 }
 
-.Page.Main .Hello .Slider {
+.Hello .Slider {
     margin-inline: 0.5rem;
     height: calc(100vh - 1rem);
     position: sticky;
@@ -40,21 +40,21 @@
     height: max-content;
 }
 
-.Page.Main .Hello .Slider > * {
+.Hello .Slider > * {
     overflow: hidden;
 }
-.Page.Main .Hello nav {
+.Hello nav {
     margin: 1rem;
 }
-.Page.Main .Hello nav .Logo.Text {
+.Hello nav .Logo.Text {
     font-size: 1rem;
 }
 
-.Page.Main .Hello header {
+.Hello header {
 	--grad: linear-gradient(0,transparent 0%, white 4rem, white calc(100% - 4rem), transparent 100%);
 }
 
-.Page.Main .Hello .Who {
+.Hello .Who {
     overflow: hidden;
     position: absolute;
     inset: 0;
@@ -64,29 +64,29 @@
 	-webkit-mask-image: var(--grad);
 }
 
-.Page.Main .Hello .Who h1{
+.Hello .Who h1{
     --size: calc(max(2rem, 20vw) - 4px);
     font-size: var(--size);
     color: var(--cprimary);
 }
-.Page.Main .Hello .Who .Details{
+.Hello .Who .Details{
     color: var(--cprimary-800);
     font-size: 3vmin;
     text-align: center;
 }
-.Page.Main .Hello .Who .Details h2{
+.Hello .Who .Details h2{
     font-size: 8vmin;
     font-family: inherit;
 }
-.Page.Main .Hello .Who .Details h2 span {
+.Hello .Who .Details h2 span {
     color: var(--cprimary-900);
     font-family: inherit;
 }
 
-.Page.Main .Hello .Who h1 span{
+.Hello .Who h1 span{
     position: relative;
 }
-.Page.Main .Hello .Who h1 span::after{
+.Hello .Who h1 span::after{
     user-select: none;
     content: ': )';
     font-weight: bold;
@@ -98,11 +98,11 @@
     font-size: calc(var(--size) * 0.3);
     font-family: Arial;
 }
-.Page.Main .Hello .Who h1:hover span::after {
+.Hello .Who h1:hover span::after {
     content: '; )';
 }
 
-.Page.Main .Hello  .Bars {
+.Hello  .Bars {
     /* perspective: 5000px; */
 	grid-area: hello;
 	height: 100%;
@@ -110,7 +110,7 @@
 	mask-image: var(--grad);
 	-webkit-mask-image: var(--grad);
 }
-.Page.Main .Hello .Bar div{
+.Hello .Bar div{
 	font-family: inherit;
 	vertical-align: middle;
 	line-height: 1;

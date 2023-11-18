@@ -1,20 +1,20 @@
 /* Debug */
 
-header {
+header.debug {
 	width: 100%;
   border: dotted greenyellow 2px;
 }
 
-section {
+section.debug {
 	width: 100%;
   border: dotted blue 4px;
 }
 
-div {
+div.debug {
   border: solid gray 1px;
 }
 
-.Page::after, .Page::before{
+.Page.debug::after, .Page.debug::before{
   content: none;
 }
 

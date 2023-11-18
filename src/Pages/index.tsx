@@ -1,23 +1,25 @@
 import { useEffect, useRef, useState } from "react";
-import {Logo, LogoBar} from '@/Components/Logo'
-import backLogo from 'public/Media/back3_low.jpg'
-
-import who from 'src/Contents/who.jsx'
 import Image from "next/image";
+import clsx from 'clsx';
+
+import {Logo, LogoBar} from '@/Components/Logo'
+
+import backLogo from '@/Public/Media/back3_low.jpg'
+import who from '@/Contents/who.jsx'
+
+import style from '@/Styles/main.module.css'
 
 const longText = "M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - M O T I V - P W - "
 
 
 export default function MainPage() {
 
-  // let { id } = useParams();
-
   const [option, setOption] = useState('music');
 
   return (
-    <div className="Main Page">
-  
-      <div id="opening" className="Hero" >
+    <div className={clsx([style.maindiv])}>
+
+      <div id="opening" className={clsx([style.Hero])} >
           <div className="Slider Box Grainy Card">
             <header className='flex down center'>
               <Logo type="full" />
@@ -30,7 +32,7 @@ export default function MainPage() {
           </div>
       </div>
 
-      <div className='Hello '>
+      <div className={clsx([style.Hello])}>
         <div className='Slider Card '>
           <header className=''>
             <div className='Bars Font Heading'>

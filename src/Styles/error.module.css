@@ -1,8 +1,8 @@
-.Page.Error section{
+.Error section{
     color: rgb(109, 0, 0);
 }
 
-.Page.Error{
+.Error{
     background-color: var(--cback);
     display: flex;
     flex-direction: column;
@@ -10,7 +10,7 @@
     justify-content: space-around;
 }
 
-.Page.Error a {
+.Error a {
     color: unset;
     display: block;
 }
