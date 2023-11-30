@@ -1,6 +1,7 @@
-.Hello {
+.body {
     height: 200vh;
-
+    margin-top: 2rem;
+    margin-inline: 1rem;
     background-color: var(--cprimary);
 
     --p1: min(max(calc(var(--pscroll) - 3.15), 0),1);

@@ -1,92 +1,51 @@
-
-body:has(.Page.Main){
+/* 
+body:has(.main){
     background-color: var(--cprimary);
     overflow-x: hidden;
-}
+} */
 
-.Page.Main {
+.body {
     background-color: var(--cprimary);
     counter-reset: titles;
     min-height: 200vh;
     --nav: max(2rem, 7vh);
 }
-/* .Page.Main * {
-    transition: transform 0.4s;
-} */
 
-.Page.Main a {
+.body a {
 	font: inherit;
 	color: inherit;
 }
 
-.Page.Main .Content{
+.content{
     min-height: calc(100vh - (var(--nav) + 2rem));
     display: grid;
     grid-template-columns: 1.25rem 1fr 1.25rem;
     grid-template-areas: "border-left content border-right";
     justify-items: center;
 }
-.Page.Main .Content .BorderLogo {
+.borderLogo {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-weight: bold;
     color: var(--cprimary-100);
 }
-.Page.Main .Content .BorderLogo:first-child {
+.borderLogo:first-child {
     grid-area: border-left;
 }
-.Page.Main .Content :not(.BorderLogo){
+.content :not(.BorderLogo){
     grid-area: content;
 } 
 
-.Page.Main .Article {
+.article {
     max-width: 80ch;
     letter-spacing: 0.125rem;
     font-size: 1.25rem;
     color:var(--cprimary-900);
 }
-
-.Page.Main .Article .Title {
+.article .title {
     text-transform: unset;
     /* font-style: italic; */
     font-size: 6rem;
     color: var(--cprimary-800);
 }
 
-
-
-/*
-.Page.Main .PersonalIntro  {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-    position: relative;
-    overflow: hidden;
-}
-
-.Page.Main .PersonalIntro .Who {
-	z-index: 9;
-	mix-blend-mode: difference;
-	color: white;
-    display: inline-block;
-    position: relative;
-}
-.Page.Main .PersonalIntro .Who::before, 
-.Page.Main .PersonalIntro .Who::after 
-{
-    font-size: min(5rem, 10vw);
-    position: absolute;
-    top:50%;
-    transform: translateY(-50%);
-}
-
-.Page.Main .Who h1 {
-	font-size: 2rem;
-	word-wrap: break-word;
-	text-align: center;
-}
-.Page.Main .Who p {
-	text-align: center;
-} */

@@ -3,63 +3,67 @@
     from {opacity: 0;}
     to {opacity: 1;}
 }
-.Page.Main .Hero {
-    background-color: none;
-    animation: kf-begin 1s 0.25s both;
+.body {
+    position: relative;
+    /* animation: kf-begin 1s 0.25s both; */
     height: 220vh;
     z-index: 100;
 
     --p1: min(var(--pscroll),1);
 
-    margin-bottom: calc(1rem * var(--p1));
+    /* margin-bottom: calc(1rem * var(--p1)); */
     margin-inline: calc(0.5rem * var(--p1));
 }
 
 
-.Page.Main .Hero .Slider {
+.frame {
     border-radius: calc(min(var(--pscroll)*2 , 1) * 1rem);
 
     position: sticky;
     height: calc(100vh - (1rem * var(--p1)));
     top: calc(0.5rem * var(--p1));
-
+/* 
     display: grid;
-    place-items: center;
-
-    z-index: 1;
+    place-items: center; */
     
-    background-color: var(--cback);
+    background-color: hsl(126, 67%, calc(10% + (53% * var(--pscroll))))
 }
 
-
-.Page.Main .Hero .Logo.Sidefan{
-    display: inline-block;
-    z-index: 1;
-    --unit: 14vw;
-    margin:0;
+.content { 
+    height: 100vh;
+    z-index: 102;
+    position: relative;
 }
 
-.Page.Main .Hero .Logo.Sidefan{
-    filter:drop-shadow(0 0 10px gray);
-}
-
-.Page.Main .Hero img{
+.body img{
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: 101;
     clip-path: circle(calc(max(calc(0.5 - var(--pscroll)), 0) * 200%));
     transition: clip-path 500ms;
 }
 
-.Page.Main .Hero h2,
-.Page.Main .Hero svg {
+
+.logo{
+    display: inline-block;
+    z-index: 1;
+    margin:0;
+}
+
+.logo{
+    filter:drop-shadow(0 0 10px gray);
+}
+
+
+.body h2,
+.body svg {
     mix-blend-mode: difference;
     color: var(--cback);
     font-size: min(2rem, 4vw);
 }
 
 
-.Page.Main .Scroller{
+.next{
     position: absolute;
     left:0;
     right: 0;
@@ -72,7 +76,7 @@
     --pstart: max(0, calc(1 - var(--pscroll)));
     opacity: calc(var(--pstart));
 }
-.Page.Main .Scroller:hover{
+.next:hover{
     animation: kf-hover 0.75s infinite alternate;
 }
 @keyframes kf-hover {

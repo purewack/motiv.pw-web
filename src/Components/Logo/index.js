@@ -1,1 +1,2 @@
-export {Logo, LogoBar} from './Logo'
+export {Logo} from './Logo'
+export {LogoBar} from './LogoBar'

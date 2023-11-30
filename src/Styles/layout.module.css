@@ -1,0 +1,21 @@
+.listcenter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.listleft {
+    display: flex;
+    align-items: center;
+}
+
+.floatleft {
+    margin-right: auto;
+}
+.floatright {
+    margin-left: auto;
+}
+
+.wide {
+    width: 100%;
+}
