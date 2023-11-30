@@ -1,6 +1,7 @@
-.Page.Main .Hello {
+.body {
     height: 200vh;
-
+    margin-top: 2rem;
+    margin-inline: 1rem;
     background-color: var(--cprimary);
 
     --p1: min(max(calc(var(--pscroll) - 3.15), 0),1);
@@ -10,7 +11,7 @@
     position: sticky;
     top: calc((200vh - (var(--nav) + 1.25rem)) * -1);
 }
-.Page.Main .Hello nav::after {
+.body nav::after {
     content: '';
 
     position: absolute;
@@ -23,7 +24,7 @@
     height: 0.5rem;
 }
 
-.Page.Main .Hello .Slider {
+.slider {
     margin-inline: 0.5rem;
     height: calc(100vh - 1rem);
     position: sticky;
@@ -40,21 +41,21 @@
     height: max-content;
 }
 
-.Page.Main .Hello .Slider > * {
+.slider > * {
     overflow: hidden;
 }
-.Page.Main .Hello nav {
+.body nav {
     margin: 1rem;
 }
-.Page.Main .Hello nav .Logo.Text {
+/* .body nav .logo.text {
     font-size: 1rem;
-}
+} */
 
-.Page.Main .Hello header {
+.body header {
 	--grad: linear-gradient(0,transparent 0%, white 4rem, white calc(100% - 4rem), transparent 100%);
 }
 
-.Page.Main .Hello .Who {
+.who {
     overflow: hidden;
     position: absolute;
     inset: 0;
@@ -64,84 +65,92 @@
 	-webkit-mask-image: var(--grad);
 }
 
-.Page.Main .Hello .Who h1{
-    --size: calc(max(2rem, 20vw) - 4px);
+.who {
+    --size: calc(18vw - 4px);
+    white-space: nowrap;
+}
+.who h1{
     font-size: var(--size);
     color: var(--cprimary);
 }
-.Page.Main .Hello .Who .Details{
+.who .details{
     color: var(--cprimary-800);
     font-size: 3vmin;
     text-align: center;
 }
-.Page.Main .Hello .Who .Details h2{
+.who .details h2{
     font-size: 8vmin;
     font-family: inherit;
 }
-.Page.Main .Hello .Who .Details h2 span {
+.who .details h2 span {
     color: var(--cprimary-900);
     font-family: inherit;
 }
 
-.Page.Main .Hello .Who h1 span{
+.smile{
     position: relative;
+    font-family: inherit;
 }
-.Page.Main .Hello .Who h1 span::after{
+.smile::after{
     user-select: none;
     content: ': )';
     font-weight: bold;
+    white-space: nowrap;
     
     position: absolute;
-    top: 40%;
-    left: 52%;
+    top: 38%;
+    left: 53%;
     transform: translate(-50%, -50%) rotate(90deg);
-    font-size: calc(var(--size) * 0.3);
+    font-size: calc(var(--size) * 0.18);
     font-family: Arial;
 }
-.Page.Main .Hello .Who h1:hover span::after {
+.who h1:hover .smile::after {
     content: '; )';
 }
-
-.Page.Main .Hello  .Bars {
-    /* perspective: 5000px; */
+ 
+.bars {
+    perspective: 5000px;
 	grid-area: hello;
 	height: 100%;
 
 	mask-image: var(--grad);
 	-webkit-mask-image: var(--grad);
+    
+    --b1filler:rgb(255, 255, 255);
+    --b2filler:rgb(255, 255, 255);
+    --b3filler:#ffffff;
+    --b1accent:rgb(40, 12, 87);
+    --b2accent:#035541;
+    --b3accent:#020e4a;
 }
-.Page.Main .Hello .Bar div{
-	font-family: inherit;
-	vertical-align: middle;
-	line-height: 1;
-	font-size: 3rem;
-}
-.Bar1{
+.bar1{
+    font-family: inherit;
 	transform-style: preserve-3d;
 	transform: translateX(-40rem) translateY(-50rem) translateZ(-2000px)  rotateZ(60deg) ;
 	--filler: var(--b1filler);
 	--accent: var(--b1accent);
 }
-.Bar1 > .object{
+.bar1 section {
 	animation-name:kf-bar1;
 	animation-duration: 20s;
 	animation-direction:alternate;
 	animation-timing-function: ease-in-out;
 	animation-iteration-count:infinite;
 	
-}
+} 
 @keyframes kf-bar1{
 	from{transform:translateX(-70vw) rotateY(30deg) rotateX(0deg)}
 	to{transform:translateX(-30vw) rotateY(30deg) rotateX(360deg)}
 }
 
-.Bar2{
+.bar2 {
+    font-family: inherit;
 	transform-style: preserve-3d;
 	transform:translateY(20rem) translateX(0rem) translateZ(-1000px) rotateZ(-45deg);
 	--filler: var(--b2filler);
 	--accent: var(--b2accent);
 }
-.Bar2 > .object{
+.bar2 section{
 	animation-name:kf-bar2;
 	animation-duration: 16s;
 	animation-direction:alternate;
@@ -153,13 +162,14 @@
 	to{transform:translateX(-100rem) rotateY(30deg) rotateX(360deg)}
 }
 
-.Bar3{
+.bar3{
+    font-family: inherit;
 	transform-style: preserve-3d;
 	transform:translateY(50vh) translateZ(0) rotateZ(20deg);
 	--filler: var(--b3filler);
 	--accent: var(--b3accent);
 }
-.Bar3 > .object{
+.bar3 section{
 	animation-name:kf-bar3;
 	animation-duration: 8s;
 	animation-timing-function: ease-in-out;

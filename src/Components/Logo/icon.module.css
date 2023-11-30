@@ -1,0 +1,44 @@
+
+.logo {
+  min-height: 2rem;
+  max-height: 6rem;
+  display: grid;
+  place-items: center;
+  width: min(5vmin, 2rem);
+}
+
+.logo svg{
+  fill: none;
+  stroke-width: 60px;
+  stroke: black;
+  
+  height: min(5vmin, 2rem);
+
+  stroke: white;
+  mix-blend-mode: difference;
+  
+  /* border: solid red 1px; */
+}
+
+
+.logo svg{
+  stroke-width: 50px;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  animation: kf-icon-entry 2s 1s; 
+  transition: stroke-dashoffset 1.8s, stroke 1.8s;
+} 
+
+.logo svg:hover {
+  stroke-dashoffset: 2000;
+  stroke: gray;
+}
+
+.logo svg path {
+  border-radius: 0;
+}
+
+@keyframes kf-icon-entry {
+  from {stroke-dashoffset: 0;}
+  to {stroke-dashoffset: 2000;}
+}

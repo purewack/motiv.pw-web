@@ -1,0 +1,47 @@
+.scene {
+  transform-style: preserve-3d;
+}
+.scene section{
+  transform-style: preserve-3d;
+  display: grid;
+  grid-template-areas: "bar";
+  width: 100%;
+  height: 2em;
+  
+  font-family: inherit;
+	vertical-align: middle;
+	line-height: 1;
+	font-size: 3rem;
+}
+.scene figure{
+  grid-area: bar;
+  transform-style: preserve-3d;
+  white-space: nowrap;
+  padding:.5em;
+  height:2em;
+  width:max-content;
+  font-family: inherit;
+  
+  box-shadow:inset 0 0 2rem rgba(255,255,255,.3);
+  
+  color: var(--accent, white);
+  background: var(--filler, black);
+  border:solid var(--accent, white) 3px;
+}
+.scene figure:nth-child(1){ 
+  transform: translateZ(1em);
+}
+.scene figure:nth-child(2){ 
+  color: var(--filler, black);
+  background: var(--accent, white);
+  transform:rotateX(-90deg) translateZ(1em);
+}
+.scene figure:nth-child(3){ 
+  color: var(--filler, black);
+  background: var(--accent, white);
+  transform:rotateX(90deg) translateZ(1em);
+}
+.scene figure:nth-child(4){ 
+  transform:rotateX(180deg) translateZ(1em);
+}
+
