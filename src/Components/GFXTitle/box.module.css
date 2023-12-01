@@ -1,0 +1,46 @@
+
+.scene {
+  perspective: 500px;
+}
+
+.scene * {
+  transform-style: preserve-3d;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.object {
+  position: relative;
+  transform-origin: center;
+  transform: translateZ(-100px) rotateY(40deg) rotateX(-40deg);
+  display: grid;
+  grid-template-areas: "face";
+}
+
+.face {
+  /* contain: paint; */
+  /* border: solid 1px; */
+  line-height: 1;
+  grid-area: face;
+  font-size: calc(var(--unit) * (2 / 5));
+  width: calc(var(--unit) * (2));
+  height: max-content;
+  padding: 0.2rem;
+}
+.face:nth-child(1) {
+  width: min-content;
+}
+.face:nth-child(2){
+  transform: translate(-50%) translateZ(calc(-1 * var(--unit))) rotateY(-90deg) ;
+  text-align: right;
+}
+.face:nth-child(3){
+  transform: translateZ(calc(-1 * var(--unit))) rotateX(90deg) translateZ(calc(1 * var(--unit)));
+  display:flex; 
+  flex-direction: column-reverse;
+  height: calc(var(--unit) * (2));
+  padding:0;
+}
+
+.face h1 {
+  font-size: calc(var(--unit) * (2.5 / 5));
+}

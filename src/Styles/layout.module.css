@@ -19,3 +19,8 @@
 .wide {
     width: 100%;
 }
+
+.twinCol {
+    display: grid;
+    grid-template-columns: repeat(2,auto);
+}

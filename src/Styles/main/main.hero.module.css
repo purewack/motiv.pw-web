@@ -31,18 +31,13 @@
 
 .content { 
     height: 100%;
-    z-index: 102;
     position: relative;
 }
 
-.body img{
-    position: absolute;
-    inset: 0;
-    z-index: 101;
-    clip-path: circle(calc(max(calc(0.5 - var(--pscroll)), 0) * 200%));
-    transition: clip-path 500ms;
+.content, 
+.content * {
+    color: white;
 }
-
 
 .logo{
     display: inline-block;
@@ -54,14 +49,12 @@
     filter:drop-shadow(0 0 10px gray);
 }
 
-
 .body h2,
 .body svg {
-    mix-blend-mode: difference;
-    color: var(--cback);
+    /* mix-blend-mode: difference; */
+    /* color: var(--cback); */
     font-size: min(2rem, 4vw);
 }
-
 
 .next{
     position: absolute;

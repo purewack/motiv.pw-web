@@ -1,0 +1,65 @@
+/* 
+body:has(.main){
+    background-color: var(--cprimary);
+    overflow-x: hidden;
+} */
+
+.body {
+    background-color: var(--cprimary);
+    counter-reset: titles;
+    min-height: 200vh;
+}
+
+.body a {
+	font: inherit;
+	color: inherit;
+}
+
+.content > * {
+    margin-block: 1rem;
+    margin-inline: 0.25rem;
+}
+
+.nav {
+    padding: 0.75rem;
+    position: sticky;
+    top: 0.5rem;
+}
+.nav * {
+    color: rgb(0, 118, 144);
+    stroke: currentColor;
+}
+
+
+.title1 {
+    margin: 0.33rem;
+    color: rgb(0, 0, 63);
+    background-color: lightcyan;
+}
+.title2 {
+    margin: 0.33rem;
+}
+
+.who {
+    margin-top: 4rem;
+    color: white;
+}
+
+.hello:not(.trip) {
+    border-bottom-color: var(--cprimary-100);
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.nav:not(.trip){
+    border-top-color: var(--cprimary-100);
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.nav{
+    transition: margin 3s, border 3s;
+    z-index: 100;
+}
+.nav.trip{
+    margin-top: 1rem;
+    margin-inline: 0.5rem;
+}

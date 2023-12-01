@@ -15,7 +15,7 @@
   height: min(5vmin, 2rem);
 
   stroke: white;
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
   
   /* border: solid red 1px; */
 }

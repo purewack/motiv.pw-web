@@ -8,7 +8,14 @@
 .vlarge { 
     font-size: 5rem;
 }
+.huge { 
+    font-size: 8rem;
+}
 
 .headings {
     font-family: 'Josefin Sans';
+}
+
+.thin {
+    font-weight: 100;
 }

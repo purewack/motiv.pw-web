@@ -1,0 +1,33 @@
+.scene *{
+    transform-style: preserve-3d;
+}
+
+.scene {
+    perspective: 1000px;
+}
+
+.object {
+    transform: rotateY(-30deg) rotateX(-20deg);
+}
+
+.vine {
+    font-size: var(--unit);
+    line-height: 1;
+    display: block;
+    position: relative;
+    color: red;
+    /* clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0% 100%); */
+}
+.vine::after {
+    /* clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%); */
+    position: absolute;
+    top:0;
+    left:0;
+    color: wheat;
+    content: attr(data-text);
+    transform: translateY(-50%) rotateX(30deg);
+}
+.vine, .vine::after{
+    font-family: 'Josefin Sans';
+    text-transform: uppercase;
+}

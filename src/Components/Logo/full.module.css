@@ -5,7 +5,7 @@
   position: relative; 
   stroke: white;
   fill: white;
-  mix-blend-mode: exclusion;
+  /* mix-blend-mode: exclusion; */
 }
 .logo{
   display: flex;
@@ -88,6 +88,21 @@
   to{
     transform:translate3d(-50%,0,0);
     opacity:1;
+  }
+}
+
+
+@media (prefers-reduced-motion) {
+  .spread.spread{
+    animation-duration: 18s;
+  }
+  .left .spread.spread:nth-child(2),
+  .right .spread.spread:nth-child(2){
+    animation-delay:6s;
+  }
+  .left .spread.spread:nth-child(3),
+  .right .spread.spread:nth-child(3){
+    animation-delay:12s;
   }
 }
 

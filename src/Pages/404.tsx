@@ -5,10 +5,10 @@ import layout from '@/Styles/layout.module.css'
 import Link from 'next/link'
 
 export default function Error(){
-    return <div className={clsx("fullpage", "grainy", style.Error)}>
-        <heading>
+    return <div className={clsx("fullPage", style.Error)}>
+        <header>
             <Link href="/"><Logo type="full"/></Link>
-        </heading>
+        </header>
         <section className={layout.listCenter}>
             <h1>404:</h1>
             <p>This page cannot be found, check your URL</p>
