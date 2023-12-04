@@ -19,7 +19,7 @@
  */
  @keyframes slide-in-bottom {
     0% {
-      transform: translateY(1000px);
+      transform: translateY(100px);
       opacity: 0;
     }
     100% {
@@ -46,7 +46,7 @@
  */
  @keyframes slide-in-left {
     0% {
-      transform: translateX(-1000px);
+      transform: translateX(-100px);
       opacity: 0;
     }
     100% {
@@ -73,7 +73,7 @@
  */
  @keyframes slide-in-right {
     0% {
-      transform: translateX(1000px);
+      transform: translateX(100px);
       opacity: 0;
     }
     100% {

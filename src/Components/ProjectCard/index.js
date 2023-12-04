@@ -1,6 +1,6 @@
 import { useState } from "react";
 import {getEpochDate} from "../../Util/EpochTime"
-import "./style.css"
+
 
 export default function ProjectCard({title, periods, mini = false, className = "", ...restProps}){
     

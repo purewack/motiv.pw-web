@@ -21,6 +21,13 @@
 }
 
 .twinCol {
-    display: grid;
-    grid-template-columns: repeat(2,auto);
+    display: flex;
+    flex-wrap: wrap;
+}
+.twinCol > *:first-child {
+    flex-basis: 66%;
+}
+
+.twinCol > *:last-child {
+    flex-basis: 32%;
 }

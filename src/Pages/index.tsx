@@ -15,6 +15,7 @@ import Navbar from "@/Components/Navbar";
 import GFXTitle from "@/Components/GFXTitle/GFXTitle";
 import AnimatedEnterDiv from "@/Components/AnimatedEnterDiv";
 import TripArea from "@/Components/TripArea";
+import SectionCV from "./cv";
 
 export default function MainPage() {
 
@@ -30,21 +31,24 @@ return (<div className={clsx(styles.body)}>
     <a href="#hello" className={hero.next}><span>︾</span></a>
   </header>
     
-  <TripArea>{(ref, tripped)=> <>
+  <TripArea>{(triggerRef, tripped)=> <>
     <header id="hello" className={clsx(hello.body, styles.hello, 'card', tripped && styles.trip)}>
       <div className={clsx(hello.bars, hello.heading, font.headings)}>
-        <LogoBar className={hello.bar1} text={"H E L L O :) "} />
+        <LogoBar className={hello.bar1} text={"H E L L O - T H E R E - "} />
         <LogoBar className={hello.bar2} text={"I - D E S I G N - "} />
         <LogoBar className={hello.bar3} text={"I - A M - D A M I A N - "} />
       </div> 
       <div className={clsx(hello.content, layout.listCenter)}>
         <h1 className={clsx(hello.who)}>H E L L <span className={hello.smile}>O</span></h1>
         <h2>I am Damian</h2>
-        <h3>A web developer</h3>
+        <br/>
+        <h4>A web developer</h4>
+        <h4>A musician</h4>
+        <h4>An audio engineer</h4>
       </div>
     </header>
     <Navbar className={clsx(styles.nav, 'card', tripped && styles.trip)}/>
-    <span ref={ref}></span>
+    <span ref={triggerRef}></span>
     </>}
   </TripArea>
 
@@ -61,6 +65,10 @@ return (<div className={clsx(styles.body)}>
       </AnimatedEnterDiv>
     </article>
       
+    <details>
+      <summary>My resume</summary>
+      <SectionCV className={styles.cv}/>
+    </details>
 
     <div className={clsx("card","fullPage",layout.listCenter, styles.title2)}>
       <GFXTitle type="vine" unit="25vmin" text="Work" />

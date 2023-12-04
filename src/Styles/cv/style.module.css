@@ -1,0 +1,22 @@
+.body {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 12rem auto;
+    margin: 1rem;
+}
+
+.body > *{
+    padding: 1rem;
+}
+
+.title {
+    font-size: 6rem;
+}
+
+.who {
+    font-size: 3rem;
+}
+
+.content {
+    grid-column: span 2;
+}

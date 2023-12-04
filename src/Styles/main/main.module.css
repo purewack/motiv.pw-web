@@ -20,6 +20,15 @@ body:has(.main){
     margin-inline: 0.25rem;
 }
 
+.content {
+    font-size: 2rem;
+    max-width: 80ch;
+    margin-inline: auto;
+}
+.content .cv {
+    margin: 0;
+}
+
 .nav {
     padding: 0.75rem;
     position: sticky;
@@ -45,19 +54,25 @@ body:has(.main){
     color: white;
 }
 
+.nav{ 
+    z-index: 100;
+}
+
+.hello, .nav {
+    transition: background-color 2s 1s, border 3s 1s, border-radius 3s 1s, margin 3s 1s;
+}
 .hello:not(.trip) {
-    border-bottom-color: var(--cprimary-100);
+    border-bottom-color: ivory;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+:is(.hello, .nav):not(.trip){
+    background-color: ivory;
+}
 .nav:not(.trip){
-    border-top-color: var(--cprimary-100);
+    border-top-color: ivory;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
-}
-.nav{
-    transition: margin 3s, border 3s;
-    z-index: 100;
 }
 .nav.trip{
     margin-top: 1rem;
