@@ -5,9 +5,10 @@ body:has(.main){
 } */
 
 .body {
-    background-color: var(--cprimary);
+    background-color: ivory;
     counter-reset: titles;
     min-height: 200vh;
+    padding-top: 1rem;
 }
 
 .body a {
@@ -15,27 +16,28 @@ body:has(.main){
 	color: inherit;
 }
 
-.content > * {
-    margin-block: 1rem;
-    margin-inline: 0.25rem;
-}
+
 
 .content {
     font-size: 2rem;
     max-width: 80ch;
     margin-inline: auto;
 }
-.content .cv {
-    margin: 0;
+.content > * {
+    margin-block: 1rem;
+    margin-inline: 0.25rem;
 }
+
 
 .nav {
     padding: 0.75rem;
     position: sticky;
     top: 0.5rem;
+    background-color: rgba(243, 249, 213, 0.6);
+    /* filter: drop-shadow(0 0 10px white); */
 }
 .nav * {
-    color: rgb(0, 118, 144);
+    color: rgb(81, 85, 3);
     stroke: currentColor;
 }
 
@@ -59,7 +61,7 @@ body:has(.main){
 }
 
 .hello, .nav {
-    transition: background-color 2s 1s, border 3s 1s, border-radius 3s 1s, margin 3s 1s;
+    transition: background-color 2s 0.2s, border 3s 0.2s, border-radius 3s 0.2s, margin 3s 0.2s;
 }
 .hello:not(.trip) {
     border-bottom-color: ivory;

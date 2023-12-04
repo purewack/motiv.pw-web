@@ -1,0 +1,209 @@
+
+.content {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(3, auto);
+    grid-auto-rows: minmax(30vh, max-content);
+    grid-template-areas: 
+        "calc_ calc calc"
+        "calc_ minim minim"
+        "jsong jsong jsong"
+        "jsong jsong jsong"
+        "melon sneel sneel"
+        "miki sneel sneel"
+        "miki miki_ moji";
+    
+    --theme: var(--cprimary-100);
+    background-color: var(--theme);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.content > * {
+    padding: 1rem;
+}
+/* .content > * {
+    border-color: transparent;
+} */
+.content img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.content > article h1 {
+    font-size: 5rem;
+    text-align: center;
+}
+.content > article h2 {
+    text-align: center;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 100;
+    padding: 1rem;
+    font-family: 'Dosis', sans-serif;
+}
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 20vw;
+    gap: 1rem;
+    padding: 0.25rem;
+    border-radius: 1rem;
+}
+.tag {
+    margin: 0;
+    list-style: none;
+    padding: 0.2rem;
+    padding-inline: 1rem;
+    border-radius: 1rem;
+    text-transform: capitalize;
+    /* border: solid lightgray 1px; */
+    /* font-size: 0.75rem; */
+    font-family: 'Nunito', sans-serif;
+    color: black;
+    background: snow;
+    /* opacity: 0.4; */
+    mix-blend-mode: multiply;
+}
+/* .tag.c {
+    background-color: lightyellow;
+    color: darkkhaki;
+}
+.tag.cpp,
+.tag.javascript {
+    background-color: lightcyan;
+    color: teal;
+}
+.tag.python {
+    background-color: lightsalmon;
+    color: firebrick;
+}
+.tag.hardware {
+    background-color: lavender;
+    color: indigo;
+} */
+
+.numcalcium {
+    grid-area: calc;
+    position:relative;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+
+    contain:layout;
+    padding: 2rem;
+    z-index: 10;
+
+    background-color: azure;
+    color: darkslateblue;
+}
+.numcalcium:before {
+    content: '';
+    background-color: azure;
+
+    height: calc(100% + 16px);
+    width: 32px;
+    border-top: solid lightgray 1px;
+
+    position: absolute;
+    top: -1px;
+    right: calc(100% - 11px);
+}
+.numcalcium:after {
+    content: '';
+    background-color: var(--theme);
+    border-left: solid lightgray 1px;
+    border-top: solid lightgray 1px;
+    border-top-left-radius: 1rem;
+
+    height: 1rem;
+    width: 2rem;
+
+    position: absolute;
+    top: 100%;
+    left: -17px;
+}
+
+.numcalciumFooter {
+    background-color: azure;
+    grid-area: calc_;
+    border-top-right-radius: 0;
+    padding: 1rem;
+    padding-bottom: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.minim {
+    grid-area: minim;
+    background-color: honeydew;
+    color: darkslategrey;
+}
+
+.jsong {
+    grid-area: jsong;
+    background-color: ivory;
+    color: darkkhaki;
+    min-height: 80vh;
+}
+
+.sneel {
+    grid-area: sneel;
+    background-color: rgb(185, 238, 144);
+    color: darkgreen;
+}
+
+.melon {
+    grid-area: melon;
+    background-color: mistyrose;
+    color: salmon;
+}
+
+.miki {
+    grid-area: miki;
+    background-color: white;
+    color: midnightblue;
+    border-bottom-right-radius: 0;
+}
+.mikiFooter {
+    background-color: white;
+    padding: 0;
+    padding-right: 2rem;
+    width: 10rem;
+    contain: layout;
+}
+.mikiFooter:before {
+    content: '';
+    background-color: white;
+
+    height: calc(100% + 16px);
+    width: 32px;
+    border-bottom: solid lightgray 1px;
+
+    position: absolute;
+    bottom: -1px;
+    right: calc(100% - 11px);
+}
+.mikiFooter:after {
+    content: '';
+    background-color: var(--theme);
+    border-left: solid lightgray 1px;
+    border-bottom: solid lightgray 1px;
+    border-bottom-left-radius: 1rem;
+
+    height: 1rem;
+    width: 2rem;
+
+    position: absolute;
+    bottom: 100%;
+    left: -18px;
+}
+
+
+.moji {
+    grid-area: moji;
+    background-color: ivory;
+    color: darkkhaki;
+}
