@@ -2,7 +2,7 @@
 .content {
     display: grid;
     gap: 1rem;
-    grid-template-columns: repeat(3, auto);
+    grid-template-columns: 1fr 2fr 2fr;
     grid-auto-rows: minmax(30vh, max-content);
     grid-template-areas: 
         "calc_ calc calc"
@@ -13,7 +13,7 @@
         "miki sneel sneel"
         "miki miki_ moji";
     
-    --theme: var(--cprimary-100);
+    --theme: ivory;
     background-color: var(--theme);
     padding: 1rem;
     border-radius: 1rem;
@@ -21,9 +21,9 @@
 .content > * {
     padding: 1rem;
 }
-/* .content > * {
+.content > * {
     border-color: transparent;
-} */
+}
 .content img{
     position: relative;
     width: 100%;
@@ -105,7 +105,7 @@
 
     height: calc(100% + 16px);
     width: 32px;
-    border-top: solid lightgray 1px;
+    /* border-top: solid lightgray 1px; */
 
     position: absolute;
     top: -1px;
@@ -114,8 +114,8 @@
 .numcalcium:after {
     content: '';
     background-color: var(--theme);
-    border-left: solid lightgray 1px;
-    border-top: solid lightgray 1px;
+    /* border-left: solid lightgray 1px;
+    border-top: solid lightgray 1px; */
     border-top-left-radius: 1rem;
 
     height: 1rem;
@@ -135,6 +135,9 @@
     position: relative;
     z-index: 1;
 }
+.numcalciumFooter img{
+    max-width: 20vw;
+}
 
 .minim {
     grid-area: minim;
@@ -144,7 +147,7 @@
 
 .jsong {
     grid-area: jsong;
-    background-color: ivory;
+    background-color: papayawhip;
     color: darkkhaki;
     min-height: 80vh;
 }
@@ -163,24 +166,24 @@
 
 .miki {
     grid-area: miki;
-    background-color: white;
+    background-color: lavender;
     color: midnightblue;
     border-bottom-right-radius: 0;
 }
 .mikiFooter {
-    background-color: white;
+    background-color: lavender;
     padding: 0;
     padding-right: 2rem;
-    width: 10rem;
+    /* width: 10rem; */
     contain: layout;
 }
 .mikiFooter:before {
     content: '';
-    background-color: white;
+    background-color: lavender;
 
     height: calc(100% + 16px);
     width: 32px;
-    border-bottom: solid lightgray 1px;
+    /* border-bottom: solid lightgray 1px; */
 
     position: absolute;
     bottom: -1px;
@@ -189,8 +192,8 @@
 .mikiFooter:after {
     content: '';
     background-color: var(--theme);
-    border-left: solid lightgray 1px;
-    border-bottom: solid lightgray 1px;
+    /* border-left: solid lightgray 1px;
+    border-bottom: solid lightgray 1px; */
     border-bottom-left-radius: 1rem;
 
     height: 1rem;
@@ -204,6 +207,6 @@
 
 .moji {
     grid-area: moji;
-    background-color: ivory;
+    background-color: linen;
     color: darkkhaki;
 }

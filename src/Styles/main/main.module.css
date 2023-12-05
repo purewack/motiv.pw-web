@@ -33,11 +33,11 @@ body:has(.main){
     padding: 0.75rem;
     position: sticky;
     top: 0.5rem;
-    background-color: rgba(243, 249, 213, 0.6);
+    background-color: rgba(255, 255, 255, 0.6);
     /* filter: drop-shadow(0 0 10px white); */
 }
 .nav * {
-    color: rgb(81, 85, 3);
+    color: rgb(48, 111, 0);
     stroke: currentColor;
 }
 
