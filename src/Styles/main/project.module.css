@@ -1,7 +1,7 @@
 
 .content {
     display: grid;
-    gap: 1rem;
+    gap: 2rem;
     grid-template-columns: 1fr 2fr 2fr;
     grid-auto-rows: minmax(30vh, max-content);
     grid-template-areas: 
@@ -14,9 +14,10 @@
         "miki miki_ moji";
     
     --theme: ivory;
-    background-color: var(--theme);
+    /* background-color: var(--theme); */
     padding: 1rem;
     border-radius: 1rem;
+    filter: drop-shadow(0 0 4px lightgray);
 }
 .content > * {
     padding: 1rem;
@@ -103,27 +104,28 @@
     content: '';
     background-color: azure;
 
-    height: calc(100% + 16px);
-    width: 32px;
+    height: calc(100% + 2px);
+    width: 4rem;
     /* border-top: solid lightgray 1px; */
 
     position: absolute;
     top: -1px;
-    right: calc(100% - 11px);
+    right: calc(100% - 0.5rem);
 }
 .numcalcium:after {
     content: '';
-    background-color: var(--theme);
-    /* border-left: solid lightgray 1px;
-    border-top: solid lightgray 1px; */
-    border-top-left-radius: 1rem;
+    box-sizing: content-box;
+    border-left: solid azure 2rem;
+    border-top: solid azure 2rem;
+    border-top-left-radius: 4rem;
 
     height: 1rem;
     width: 2rem;
 
+    z-index: 1;
     position: absolute;
-    top: 100%;
-    left: -17px;
+    bottom: calc(-1rem - 1px);
+    left: -4rem;
 }
 
 .numcalciumFooter {
@@ -170,6 +172,9 @@
     color: midnightblue;
     border-bottom-right-radius: 0;
 }
+.miki.miki {
+    flex-direction: column-reverse;
+}
 .mikiFooter {
     background-color: lavender;
     padding: 0;
@@ -181,8 +186,8 @@
     content: '';
     background-color: lavender;
 
-    height: calc(100% + 16px);
-    width: 32px;
+    height: calc(100% + 2px);
+    width: 3rem;
     /* border-bottom: solid lightgray 1px; */
 
     position: absolute;
@@ -191,17 +196,17 @@
 }
 .mikiFooter:after {
     content: '';
-    background-color: var(--theme);
-    /* border-left: solid lightgray 1px;
-    border-bottom: solid lightgray 1px; */
-    border-bottom-left-radius: 1rem;
+    border-left: solid lavender 2rem;
+    border-bottom: solid lavender 2rem;
+    border-bottom-left-radius: 4rem;
 
-    height: 1rem;
-    width: 2rem;
+    height: 4rem;
+    width: 4rem;
 
+    z-index: 1;
     position: absolute;
-    bottom: 100%;
-    left: -18px;
+    bottom: calc(100% - 2rem);
+    left: -4rem;
 }
 
 
