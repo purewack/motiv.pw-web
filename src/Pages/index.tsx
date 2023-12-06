@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import clsx from 'clsx';
+import { Icon } from '@iconify/react';
 
 import main from '@/Styles/main/main.module.css'
 import hero from '@/Styles/main/hero.module.css'
@@ -77,13 +78,14 @@ return (<div className={clsx(main.body)}>
 
     </section>
 
-    <section className={clsx(skills.content, layout.twinCol)}>
+    <section className={clsx(skills.content)}>
+      <div className={clsx(layout.twinCol)}>
       <div className={clsx(skills.info, font.subtext, font.right, font.weight600, font.size800)}>
         <p>I'm  
           <TripArea>{(
             triggerRef: React.RefObject<HTMLInputElement>, 
             tripped: boolean
-          ) => <span ref={triggerRef} className={tripped && skills.polish}>Polish</span>}
+          ) => <span ref={triggerRef} className={clsx(tripped && skills.polish)}>Polish</span>}
           </TripArea>
         </p>
         <p>but here's</p> 
@@ -107,9 +109,10 @@ return (<div className={clsx(main.body)}>
         <li>JSFX</li>
         <li>English</li>
       </ul>
+      </div>
+      <LanguagesBanner className={main.test}/>
     </section>
     
-    <LanguagesBanner />
 
     <section className={clsx('',project.content)}>
 
@@ -177,19 +180,19 @@ return (<div className={clsx(main.body)}>
 </div>);
 }
 
-function LanguagesBanner(){
-  return <div>
-    <i className="devicon-css3-plain"></i>
-    <i className="devicon-html5-plain"></i> 
-    <i className="devicon-nodejs-plain"></i>
-    <i className="devicon-typescript-plain"></i>
-    <i className="devicon-react-original"></i>
-    <i className="devicon-nextjs-original"></i>
-    <i className="devicon-c-plain"></i>
-    <i className="devicon-cplusplus-plain"/> 
-    <i className="devicon-python-plain"></i>
-    <i className="devicon-lua-plain"></i>
-    <i className="devicon-swift-plain"></i>
-    <i className="devicon-java-plain"></i>
+function LanguagesBanner({className}){
+  return <div className={className}>
+    <Icon icon="icomoon-free:html-five" />
+    <Icon icon="teenyicons:css3-solid" />
+    <Icon icon="raphael:js" />
+    <Icon icon="teenyicons:typescript-solid" />
+    <Icon icon="mdi:react" />
+    <Icon icon="akar-icons:nextjs-fill" />
+    <Icon icon="devicon-plain:c" />
+    <Icon icon="simple-icons:cplusplus" />
+    <Icon icon="cib:python" />
+    <Icon icon="file-icons:lua" />
+    <Icon icon="simple-icons:swift" />
+    <Icon icon="la:java" />
   </div>
 }

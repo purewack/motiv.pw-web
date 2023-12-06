@@ -87,3 +87,9 @@ body:has(.main){
     margin-top: 1rem;
     margin-inline: 0.25rem;
 }
+
+.test {
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-evenly;
+}
