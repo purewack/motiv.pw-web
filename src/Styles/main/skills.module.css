@@ -64,7 +64,7 @@
 .polish:after {
     content: 'Polish';
     position: absolute;
-    top: 0.5px;
+    top: -1px;
     left: 0;
     color: white;
     clip-path: inset(0 0 100% 0);

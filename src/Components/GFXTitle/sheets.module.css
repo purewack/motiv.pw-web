@@ -34,7 +34,7 @@
 }
 .start .object {
     transform: translateX(calc(var(--unit) * -0.17)) translateZ(calc(var(--unit) * -0.2))  rotateY(-40deg);
-    animation: float 20s 3s infinite;
+    animation: float 20s 2s infinite;
 }
 @keyframes float {
     50% {
@@ -46,7 +46,7 @@
     transition: transform 3s;
 }
 .start .face span{
-    transform: translateY(calc(var(--index) * 50%));
+    transform: translateY(calc(var(--index) * var(--unit) * 0.11));
 }
 
 .face {

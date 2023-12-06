@@ -68,7 +68,7 @@ return (<div className={clsx(main.body)}>
       <h1 className={clsx(skills.heading, layout.stickyTop500, font.sideways, font.upper, font.size800)}>Skills</h1>
 
       <div className={clsx(card.normal, skills.card, layout.grow, layout.gridAbsolute)}>
-        <h1 className={clsx(skills.message, font.thin, font.center, font.upper, font.headings, font.size800)}>
+        <h1 className={clsx(skills.message, layout.placeCenter, font.thin, font.center, font.upper, font.headings, font.size800)}>
           I<br/>love<br/>to<br/>create
         </h1>
         <TripArea>{(
@@ -98,7 +98,7 @@ return (<div className={clsx(main.body)}>
         <Icon icon="simple-icons:swift" />,
         <Icon icon="la:java" />
       ]}/>
-      <div className={clsx(skills.info, font.subtext, font.right, font.weight600, font.size800)}>
+      <div className={clsx(skills.info, font.subheadings, font.right, font.weight900, font.size800)}>
         <p>I'm  
           <TripArea>{(
             triggerRef: React.RefObject<HTMLInputElement>, 
