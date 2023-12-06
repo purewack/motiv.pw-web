@@ -48,10 +48,10 @@
 
 .polish {
     position: relative;
-    animation: polish 2s forwards;
+    animation: polish 6s;
 }
 @keyframes polish {
-    100% {
+    40%,70% {
         color: red;
         filter: drop-shadow(0 0 2px lightgray);
     }
@@ -63,10 +63,10 @@
     left: 0;
     color: white;
     clip-path: inset(0 0 100% 0);
-    animation: polish-top 2s forwards;
+    animation: polish-top 6s;
 }
 @keyframes polish-top {
-    100% {
+    40%,70% {
         clip-path: inset(0 0 42% 0);
     }
 }

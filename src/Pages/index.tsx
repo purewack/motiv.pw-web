@@ -79,11 +79,11 @@ return (<div className={clsx(main.body)}>
 
     <section className={clsx(skills.content, layout.twinCol)}>
       <div className={clsx(skills.info, font.subtext, font.right, font.weight600, font.size800)}>
-        <p>I'm 
+        <p>I'm  
           <TripArea>{(
             triggerRef: React.RefObject<HTMLInputElement>, 
             tripped: boolean
-          ) => <span ref={triggerRef} className={tripped && skills.polish}>Polish</span>}
+          ) => <span ref={triggerRef} className={tripped && skills.polish}> Polish</span>}
           </TripArea>
         </p>
         <p>but here's</p> 
