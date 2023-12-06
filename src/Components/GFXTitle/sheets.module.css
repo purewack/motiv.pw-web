@@ -9,7 +9,6 @@
     display: grid;
     grid-template-areas: "abs";
     transform-style: preserve-3d;
-    transform: translateX(calc(var(--unit) * -0.17)) translateZ(calc(var(--unit) * -0.2))  rotateY(-40deg);
 }
 
 .face {
@@ -18,8 +17,7 @@
     grid-area: abs;
     height: var(--unit);
     aspect-ratio: 1 / 2;
-    transform: translateZ(calc((var(--index)) * -50px));
-    filter: contrast(0) sepia(100%) hue-rotate(var(--themeHue,120deg)) saturate(10) brightness(0.4) ;
+    filter: contrast(0) sepia(100%) hue-rotate(var(--themeHue,120deg)) saturate(20) brightness(0.6) ;
 }
 .face span {
     font-size: calc(var(--unit) * 0.12);
@@ -28,5 +26,39 @@
     white-space: break-spaces;
     opacity: 0.5;
     position: absolute;
+}
+
+
+.object {
+    transition: transform 2s;
+}
+.start .object {
+    transform: translateX(calc(var(--unit) * -0.17)) translateZ(calc(var(--unit) * -0.2))  rotateY(-40deg);
+    animation: float 20s 3s infinite;
+}
+@keyframes float {
+    50% {
+        transform: translateX(calc(var(--unit) * 0.17)) translateZ(calc(var(--unit) * -0.2))  rotateY(40deg);
+    }
+}
+
+.face span {
+    transition: transform 3s;
+}
+.start .face span{
     transform: translateY(calc(var(--index) * 50%));
+}
+
+.face {
+    transition: transform 3s;
+}
+.start .face {
+    transform: translateZ(calc((var(--index)) * -50px));
+    animation: pulse 10s 3s infinite;
+}
+
+@keyframes pulse {
+    50% {
+        transform: translateZ(calc((var(--index)) * -20px));
+    }
 }

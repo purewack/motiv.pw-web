@@ -115,10 +115,15 @@ return (<div className={clsx(main.body)}>
     </section>
 
     <section className={clsx(project.title, layout.twinColRev)}>
-      <h1 className={clsx(main.sectionTitle, font.size800)}>Projects</h1>
-      <div className={clsx('card', main.sectionCard,main.projectsCard, layout.padding800, layout.gridAbsolute)}>
-        <GFXTitle className={main.projectsGFX} unit={'70vmin'} text='work' type='sheets' />
-      </div>
+      <TripArea>{(
+        triggerRef: React.RefObject<HTMLInputElement>, 
+        tripped: boolean
+      ) => <>
+        <h1 ref={triggerRef} className={clsx(main.sectionTitle, font.size800)}>Projects</h1>
+        <div className={clsx('card', main.sectionCard, main.projectsCard, layout.padding800, layout.gridAbsolute)}>
+          <GFXTitle className={main.projectsGFX} unit={'70vmin'} text='work' type='sheets' shouldStart={tripped}/>
+        </div>
+      </>}</TripArea>
     </section>
 
     <section className={clsx('',project.content)}>
