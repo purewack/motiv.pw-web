@@ -27,19 +27,18 @@
     place-self: center;
 }
 
-
 .info{
     flex-grow: 0.5;
     margin-block: 4rem;
 }
 .content.content {
     padding: 2rem;
-    color: darkseagreen;
+    color: #5c5470;
     /* border: none; */
     /* background-color: rgb(217, 255, 235); */
 }
 .lang {
-    color: lightgray;
+    color: #2a2438;;
     list-style: none;
 }
 .lang li {
@@ -76,4 +75,11 @@
     40%,70% {
         clip-path: inset(0 0 42% 0);
     }
+}
+
+
+.flipper {
+    --theme:  #2a2438;    
+    /* opacity: 0.7; */
+    filter: drop-shadow(0 0 10px lightgray);
 }

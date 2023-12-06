@@ -1,0 +1,70 @@
+.scene {
+    transform-style: preserve-3d;
+    perspective: 400px;
+}
+
+.object {
+    transform-style: preserve-3d;
+    display: grid;
+    grid-template-areas: "abs";
+    transform: translateZ(-300px) rotateY(40deg);
+    translate: 0 50%;
+    /* transform-origin: 0 0; */
+    /* animation: flip 10s linear infinite; */
+}
+/* @keyframes flip {
+    to {
+        transform: translateZ(-300px) rotateX(360deg);    
+    }
+} */
+
+.face {
+    transform-style: preserve-3d;
+    grid-area: abs;
+    height: var(--unit);
+    width: var(--unit);
+    /* opacity: 0.9; */
+    transform-origin: 0 0;
+    /* translateZ(calc(var(--index) * -10px)); */
+    /* filter: contrast(0) sepia(1) saturate(1.4) hue-rotate(calc(var(--index) * 30deg)); */
+    background-color:var(--theme-back, white);
+    padding: 1rem;
+    position: relative;
+    contain: unset;
+    /* filter: drop-shadow(0 0 20px var(--theme-back, white)); */
+}
+.face .item {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+.face svg {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;   
+}
+.face path {
+    fill: var(--theme, black);
+}
+
+.face {
+    animation-name: flip;
+    animation-duration: calc(var(--total) * 1.6s);
+    animation-delay: calc(var(--index) * 1s);
+    animation-iteration-count: infinite;
+    transform: translateZ(calc(var(--nindex) * 3px)) rotateX(0);  
+}
+@keyframes flip {
+    0% {
+        transform: translateZ(calc(var(--nindex) * 3px)) rotateX(0);    
+    } 
+    10%,50% {
+        transform: translateZ(calc(var(--nindex) * -1px)) rotateX(179deg);    
+    }
+    50% {
+        transform: translateZ(calc(var(--nindex) * -1px)) rotateX(359deg); 
+    }
+    100% {
+        transform: translateZ(calc(var(--nindex) * 3px)) rotateX(360deg); 
+    }
+}

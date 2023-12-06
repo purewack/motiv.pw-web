@@ -52,6 +52,9 @@
     display: grid;
     grid-template-areas: "abs";
 }
+.gridAbsoluteCenter {
+    grid-area: abs;
+}
 .placeCenter {
     place-self: center;
 }

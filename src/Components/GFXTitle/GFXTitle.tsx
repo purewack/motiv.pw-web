@@ -85,8 +85,10 @@ export default function GFXTitle({
     if(type === 'flip') return <div className={clsx(className, flip.scene, shouldStart && flip.start)} style={unitStyle}>
     <div className={flip.object}>
     {items.map((item,i,a) => {
-        return <div key={`flip_page_${i}`} className={clsx(card.grainy, flip.face)} style={{'--index': i,'--nindex': a.length - i} as CSSProperties} >
-            {item}
+        return <div key={`flip_page_${i}`} className={clsx(card.normal, flip.face)} style={{'--index': i,'--nindex': a.length - i, '--total':a.length} as CSSProperties} >
+            <div className={flip.item}>
+            {item
+            }</div>
         </div>
     })}
     </div>

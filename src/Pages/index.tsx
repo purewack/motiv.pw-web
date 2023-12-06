@@ -82,8 +82,22 @@ return (<div className={clsx(main.body)}>
       </div>
     </section>
 
-    <section className={clsx(skills.content, card.normal)}>
-      <div className={clsx(layout.twinCol)}>
+    <section className={clsx(skills.content, card.normal, layout.twinCol)}>
+      <GFXTitle className={clsx(skills.flipper, layout.gridAbsoluteCenter, layout.placeCenter)} 
+      unit="25rem" type='flip' items={[
+        <Icon icon="icomoon-free:html-five" />,
+        <Icon icon="teenyicons:css3-solid" />,
+        <Icon icon="raphael:js" />,
+        <Icon icon="teenyicons:typescript-solid" />,
+        <Icon icon="mdi:react" />,
+        <Icon icon="akar-icons:nextjs-fill" />,
+        <Icon icon="devicon-plain:c" />,
+        <Icon icon="simple-icons:cplusplus" />,
+        <Icon icon="cib:python" />,
+        <Icon icon="file-icons:lua" />,
+        <Icon icon="simple-icons:swift" />,
+        <Icon icon="la:java" />
+      ]}/>
       <div className={clsx(skills.info, font.subtext, font.right, font.weight600, font.size800)}>
         <p>I'm  
           <TripArea>{(
@@ -113,8 +127,6 @@ return (<div className={clsx(main.body)}>
         <li>JSFX</li>
         <li>English</li>
       </ul>
-      </div>
-      <LanguagesBanner />
     </section>
 
     <section className={clsx(project.title, layout.twinColRev)}>
@@ -193,21 +205,4 @@ return (<div className={clsx(main.body)}>
     </div> */}
   </main>
 </div>);
-}
-
-function LanguagesBanner({className = ''}){
-  return <div className={className}>
-    <Icon icon="icomoon-free:html-five" />
-    <Icon icon="teenyicons:css3-solid" />
-    <Icon icon="raphael:js" />
-    <Icon icon="teenyicons:typescript-solid" />
-    <Icon icon="mdi:react" />
-    <Icon icon="akar-icons:nextjs-fill" />
-    <Icon icon="devicon-plain:c" />
-    <Icon icon="simple-icons:cplusplus" />
-    <Icon icon="cib:python" />
-    <Icon icon="file-icons:lua" />
-    <Icon icon="simple-icons:swift" />
-    <Icon icon="la:java" />
-  </div>
 }
