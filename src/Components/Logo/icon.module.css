@@ -14,7 +14,7 @@
   
   height: min(5vmin, 2rem);
 
-  stroke: white;
+  stroke: var(--theme, white);
   /* mix-blend-mode: difference; */
   
   /* border: solid red 1px; */
@@ -31,7 +31,7 @@
 
 .logo svg:hover {
   stroke-dashoffset: 2000;
-  stroke: gray;
+  stroke: var(--theme-hover, darkgray);
 }
 
 .logo svg path {

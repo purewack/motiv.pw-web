@@ -1,0 +1,75 @@
+
+.object {
+    display: grid;
+    grid-template-areas: "top" "x" "bot";
+    grid-template-rows: 1fr 2fr 1fr;
+    /* aspect-ratio: 3 / 3; */
+    /* background-color: black; */
+}
+
+.titleTop {
+    grid-area: top;
+    transform-origin: 70% 250%;
+    z-index: 10;
+}
+
+@keyframes spiral-top {
+    100% {
+        transform: rotateZ(calc(-10deg * var(--index))) scale(calc(0.4 + 0.6  * var(--nindex) / 8 )) ;
+    }
+}
+@keyframes breathe-top {
+    to, from {
+        transform: rotateZ(calc(-10deg * var(--index))) scale(calc(0.4 + 0.6  * var(--nindex) / 8 )) ;
+    }
+    50% {
+        transform: rotateZ(calc(-6deg * var(--index))) scale(calc(0.4 + 0.6  * var(--nindex) / 8 )) ;
+    }
+}
+
+.titleBottom {
+    grid-area: bot;
+    align-self:flex-end;
+    
+    transform-origin: 30% -180%;
+}
+
+@keyframes spiral-bottom {
+    100% {
+        transform: rotateZ(calc(-10deg * var(--index))) scale(calc(0.4 + 0.60 * var(--nindex) / 8 )) ;
+    }
+}
+@keyframes breathe-bottom {
+    to, from {
+        transform: rotateZ(calc(-10deg * var(--index))) scale(calc(0.4 + 0.6  * var(--nindex) / 8 )) ;
+    }
+    50% {
+        transform: rotateZ(calc(-6deg * var(--index))) scale(calc(0.4 + 0.6  * var(--nindex) / 8 )) ;
+    }
+}
+
+.title {
+    --size: var(--unit);
+    font-size: var(--size);
+    font-weight: bold;
+    line-height: 1;
+    text-transform: uppercase;
+    font-family: 'Josefin Sans';
+
+    height: calc(var(--size) * 0.8 + 2px);
+    width: min-content;
+    justify-self: center;
+    text-align: center;
+    padding: 4px;
+
+    /* opacity: 0.9; */
+    background-color: var(--theme-back);
+    color:  var(--theme-front);
+}
+
+.start .titleTop{
+    animation: spiral-top 5s 0s, breathe-top 10s 5s infinite;
+}
+.start .titleBottom{
+    animation: spiral-bottom 5s 0s, breathe-bottom 10s 5s infinite;
+}

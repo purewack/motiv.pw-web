@@ -5,9 +5,9 @@ import layout from '@/Styles/layout.module.css'
 import Link from 'next/link'
 
 export default function Error(){
-    return <div className={clsx("fullPage", style.Error)}>
+    return <div className={clsx("card", 'grainy', 'cardPage700', layout.listCenter, layout.margin700, style.Error)}>
         <header>
-            <Link href="/"><Logo type="full"/></Link>
+            <Link href="/"><Logo className={style.logo} type="full"/></Link>
         </header>
         <section className={layout.listCenter}>
             <h1>404:</h1>

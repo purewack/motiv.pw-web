@@ -3,9 +3,8 @@
 .logo {
   margin: 1rem;
   position: relative; 
-  stroke: white;
-  fill: white;
-  /* mix-blend-mode: exclusion; */
+  stroke: var(--theme, white);
+  fill: var(--theme, white);
 }
 .logo{
   display: flex;

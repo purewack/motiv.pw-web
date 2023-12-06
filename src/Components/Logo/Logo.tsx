@@ -4,10 +4,10 @@ import full from './full.module.css'
 import icon from './icon.module.css'
 
 export default function Logo({ type='icon', className, style, unit}: {
-  type: string,
+  type?: string,
   className?: string,
   style?: CSSProperties,
-  unit?: CSSUnitValue
+  unit?: string
 }) {
 
   const common = {
@@ -17,8 +17,6 @@ export default function Logo({ type='icon', className, style, unit}: {
     'display': 'inline-block',
     'margin':0,
     'padding':0, 
-    'stroke': 'white',
-    'fill': 'white',
   } 
 
   return <>
@@ -54,7 +52,7 @@ export default function Logo({ type='icon', className, style, unit}: {
         </svg>
       </div>
       <div>
-        <svg viewBox="0 0 76 16" className={full.logotextscene}>
+        <svg viewBox="0 0 76 16" style={commonsvg} className={full.logotextscene}>
           {/* <rect x='0' y='0' width={76} height={16} stroke='black' fill='green'></rect> */}
           <text x={0} y={13.5} className={full.logotext}>M O T I V</text>
           {/* <line x1={1} x2={57} y1={15.5} y2={15.5}></line> */}
@@ -62,7 +60,7 @@ export default function Logo({ type='icon', className, style, unit}: {
       </div>
       <div className={clsx(full.wrap, full.dummy)}></div>
       <div className={clsx(full.wrap, full.right)}>
-        <svg viewBox="0 0 16 16" className={full.spreadscene}>
+        <svg viewBox="0 0 16 16" style={commonsvg} className={full.spreadscene}>
           {/* <rect x='0' y='0' width={16} height={16} stroke='red' fill='purple'></rect> */}
           <g className={full.spread}><text x={4} y={13.5} >V</text></g>
           <g className={full.spread}><text x={4} y={13.5} >V</text></g>

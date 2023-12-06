@@ -16,6 +16,14 @@
   min-height: 100vh;
   min-height: 100dvh;
 }
+.cardPage700 {
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100vh - 4rem)
+}
+.cardPage800 {
+  min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 6rem)
+}
 
 .wideText {
   text-transform: uppercase;

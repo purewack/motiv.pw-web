@@ -16,18 +16,24 @@ body:has(.main){
 	color: inherit;
 }
 
-
+.hello.hello {
+    margin-bottom: 0;
+}
 
 .content {
     font-size: 2rem;
     max-width: 80ch;
     margin-inline: auto;
+    padding: 1rem;
 }
 .content > * {
     margin-block: 1rem;
     margin-inline: 0.25rem;
 }
-
+.content > h1 {
+    margin-top: 5rem;
+    color: dimgray;
+}
 
 .nav {
     padding: 0.75rem;
@@ -37,7 +43,7 @@ body:has(.main){
     /* filter: drop-shadow(0 0 10px white); */
 }
 .nav * {
-    color: rgb(48, 111, 0);
+    color: rgb(86, 86, 86);
     stroke: currentColor;
 }
 
@@ -75,8 +81,9 @@ body:has(.main){
     border-top-color: ivory;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+    margin-inline: 1rem;
 }
 .nav.trip{
     margin-top: 1rem;
-    margin-inline: 0.5rem;
+    margin-inline: 0.25rem;
 }

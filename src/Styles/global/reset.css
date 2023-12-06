@@ -1,34 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;400&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Nunito:wght@300&family=Source+Code+Pro:wght@200;400&display=swap');
-
-*, *::after, *::before{
-    font-family: 'Dosis', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;500&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Josefin+Sans:ital,wght@0,100;0,300;0,400;0,700;1,100;1,300;1,400;1,700&family=Manrope:wght@200;500&family=Nunito:wght@300&family=Permanent+Marker&display=swap');
+body{
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
 }
 h1, h2, h3, h4, h5, h6 {
-    font-family: "Josefin Sans", sans-serif;
+  font-family: "Josefin Sans", sans-serif;
 }
 h1, h2, h3, h4, h5, h6{
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 span, p, div, section {
-    line-height: 1.75;
+  line-height: 1.75;
 }
 
 button { 
-    font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif;
 }
 
-.polaroid::after { 
-    font-family: 'Gochi Hand', cursive;
-}
 
 /* End font */
 
-:root{ 
-  /* --bb: min(0.5rem, min(5vh,5vw));
-  --bbb: calc(var(--bb)*3);
-  --acc: min(4px,3vh); */
-  --pscroll: 0;
-}
 
 *,
 *::before,

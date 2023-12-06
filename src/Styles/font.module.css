@@ -1,21 +1,68 @@
-.medium {
+.size100 {
+    font-size: 1rem;
+}
+.size200 {
+    font-size: 1.2rem;
+}
+.size300 {
     font-size: 1.4rem;
 }
-
-.large { 
+.size500{
+    font-size: 2rem;
+}
+.size600{ 
     font-size: 3rem;
 }
-.vlarge { 
+.size700 { 
     font-size: 5rem;
 }
-.huge { 
+.size800 { 
     font-size: 8rem;
 }
+.size900 { 
+    font-size: 10rem;
+}
 
+.right{
+    text-align: right;
+}
+
+.subtext {
+    font-family: 'Inter', sans-serif;
+}
 .headings {
     font-family: 'Josefin Sans';
 }
-
+.subheadings {
+    font-family: 'Nunito', sans-serif;
+}
+.serious {
+    font-family: 'Cormorant Garamond', serif;
+}
 .thin {
+    font-weight: 100;
+}
+.weight800 {
+    font-weight: 800;
+}
+.weight700 {
+    font-weight: 700;
+}
+.weight600 {
+    font-weight: 600;
+}
+.weight500 {
+    font-weight: 500;
+}
+.weight400 {
+    font-weight: 400;
+}
+.weight300 {
+    font-weight: 300;
+}
+.weight200 {
+    font-weight: 200;
+}
+.weight100 {
     font-weight: 100;
 }

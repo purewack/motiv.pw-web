@@ -1,12 +1,10 @@
 .body {
     position: relative;
     height: 200vh;
-    display: grid;
-    grid-template-areas: "hello"; 
     --grad: linear-gradient(0,transparent 0%, white 30vh, white calc(100% - 30vh), transparent 100%);
 }
 .content {
-    grid-area: hello;
+    grid-area: abs;
     position: relative;
     color: var(--cprimary-800);
 }
@@ -42,7 +40,7 @@
 .bars {
     overflow: hidden;
     perspective: 5000px;
-	grid-area: hello;
+	grid-area: abs;
 	height: 100%;
 
 	mask-image: var(--grad);

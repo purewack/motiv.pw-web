@@ -1,0 +1,47 @@
+
+.body {
+    --theme-back: antiquewhite;
+    --theme: snow;
+    background-color: var(--theme-back);
+    color: var(--theme);
+    padding: 1rem;
+}
+.title {
+    grid-area: abs;
+    text-align: center;
+    place-self: center;
+    z-index: 20;
+    color: lightslategray;
+    line-height: 1.2;
+}
+.gfx{
+    grid-area: abs;
+    height: 80vh;
+}
+
+.trigger {
+    grid-area: abs;
+    place-self: center;
+}
+
+
+.content {
+    margin-block: 15rem;
+    color: lightgreen;
+}
+.lang {
+    color: darkseagreen;
+    list-style: none;
+}
+.lang li {
+    font-family: inherit;
+}
+.content i {
+    /* width: 4rem;
+    height: 4rem;
+    font-size: 4rem; */
+}
+
+.info :is(p, span) {
+    line-height: 1.2;
+}

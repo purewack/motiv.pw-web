@@ -22,7 +22,7 @@
 
 .twinCol {
     display: flex;
-    flex-wrap: wrap;
+    gap: 1.5rem;
 }
 .twinCol > *:first-child {
     flex-basis: 66%;
@@ -30,4 +30,48 @@
 
 .twinCol > *:last-child {
     flex-basis: 32%;
+}
+
+.gridAbsolute {
+    display: grid;
+    grid-template-areas: "abs";
+}
+
+.margin900 {
+    margin: 3rem;
+}
+.margin800 {
+    margin: 2.5rem;
+}
+.margin700{
+    margin: 2.25rem;
+}
+.margin600{
+    margin: 2rem;
+}
+.margin500{
+    margin: 1.5rem;
+}
+.margin400 {
+    margin: 1rem;
+}
+.margin300 {
+    margin: 0.75rem;
+}
+.margin200 {
+    margin: 0.5rem;
+}
+.margin100 {
+    margin: 0.25rem;
+}
+
+
+.block900 {
+    margin-block: 12rem;
+}
+.block800 {
+    margin-block: 10rem;
+}
+.block700 {
+    margin-block: 8rem;
 }

@@ -1,13 +1,9 @@
-.Error section{
-    color: rgb(109, 0, 0);
+.Error{
+    --theme: black;
 }
 
-.Error{
-    background-color: var(--cback);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+.Error section{
+    color: rgb(109, 0, 0);
 }
 
 .Error a {
