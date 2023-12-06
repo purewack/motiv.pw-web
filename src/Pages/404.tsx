@@ -1,11 +1,14 @@
-import style from '@/Styles/error.module.css'
+import Link from 'next/link'
 import {Logo} from '@/Components/Logo'
 import clsx from 'clsx'
+
+import style from '@/Styles/error.module.css'
 import layout from '@/Styles/layout.module.css'
-import Link from 'next/link'
+import card from '@/Styles/card.module.css'
+import font from '@/Styles/font.module.css'
 
 export default function Error(){
-    return <div className={clsx("card", 'grainy', 'cardPage700', layout.listCenter, layout.margin700, style.Error)}>
+    return <div className={clsx(card.normal, card.grainy, card.page200, font.headings, layout.listSpacedCenter, layout.margin700, style.Error)}>
         <header>
             <Link href="/"><Logo className={style.logo} type="full"/></Link>
         </header>

@@ -75,7 +75,7 @@ return (<div className={clsx(main.body)}>
             triggerRef: React.RefObject<HTMLInputElement>, 
             tripped: boolean
           ) => <>
-            <GFXTitle type='swirl' text="skills" className={skills.gfx} shouldStart={tripped}/>
+            <GFXTitle type='swirl' items="skills" className={skills.gfx} shouldStart={tripped}/>
             <span className={skills.trigger} ref={triggerRef}></span>
           </>
         }</TripArea>
@@ -124,7 +124,7 @@ return (<div className={clsx(main.body)}>
       ) => <>
         <h1 ref={triggerRef} className={clsx(project.heading, layout.stickyTop500, font.sideways, font.upper, font.size800)}>Projects</h1>
         <div className={clsx(project.card, card.normal, layout.grow, layout.padding800, layout.gridAbsolute)}>
-          <GFXTitle className={clsx(project.gfx, layout.placeCenter)} unit={'70vmin'} text='work' type='sheets' shouldStart={tripped}/>
+          <GFXTitle className={clsx(project.gfx, layout.placeCenter)} unit={'70vmin'} items='work' type='sheets' shouldStart={tripped}/>
         </div>
       </>}</TripArea>
     </section>
