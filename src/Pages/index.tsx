@@ -63,19 +63,20 @@ return (<div className={clsx(main.body)}>
   </TripArea>
 
   <main className={main.content}>
-    <h1 className={font.size800}>Skills</h1>
-    <section className={clsx('card', skills.body, layout.gridAbsolute)}>
-      <h1 className={clsx(skills.title, font.thin, font.headings, font.size800)}>I<br/>love<br/>to<br/>create</h1>
-      
-      <TripArea>{(
-          triggerRef: React.RefObject<HTMLInputElement>, 
-          tripped: boolean
-        ) => <>
-          <GFXTitle type='swirl' text="skills" className={skills.gfx} shouldStart={tripped}/>
-          <span className={skills.trigger} ref={triggerRef}></span>
-        </>
-      }</TripArea>
+    <section className={clsx(skills.body, layout.twinCol)}>
+      <h1 className={clsx(skills.title, font.size800)}>Skills</h1>
 
+      <div className={clsx('card',skills.card,layout.gridAbsolute)}>
+        <h1 className={clsx(skills.heading, font.thin, font.headings, font.size800)}>I<br/>love<br/>to<br/>create</h1>
+        <TripArea>{(
+            triggerRef: React.RefObject<HTMLInputElement>, 
+            tripped: boolean
+          ) => <>
+            <GFXTitle type='swirl' text="skills" className={skills.gfx} shouldStart={tripped}/>
+            <span className={skills.trigger} ref={triggerRef}></span>
+          </>
+        }</TripArea>
+      </div>
     </section>
 
     <section className={clsx(skills.content)}>
@@ -113,7 +114,7 @@ return (<div className={clsx(main.body)}>
       <LanguagesBanner className={main.test}/>
     </section>
     
-
+    <h1 className={font.size800}>Projects</h1>
     <section className={clsx('',project.content)}>
 
       <article className={clsx('card', layout.listCenter, project.numcalcium)}>

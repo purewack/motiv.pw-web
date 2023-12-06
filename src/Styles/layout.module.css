@@ -24,14 +24,6 @@
     display: flex;
     gap: 1.5rem;
 }
-.twinCol > *:first-child {
-    flex-basis: 66%;
-}
-
-.twinCol > *:last-child {
-    flex-basis: 32%;
-}
-
 .gridAbsolute {
     display: grid;
     grid-template-areas: "abs";

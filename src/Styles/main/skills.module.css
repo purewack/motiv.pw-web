@@ -2,17 +2,27 @@
 .body {
     --theme-back: antiquewhite;
     --theme: snow;
-    background-color: var(--theme-back);
-    color: var(--theme);
     padding: 1rem;
 }
+.card {
+    background-color: var(--theme-back);
+    color: var(--theme);
+    flex-grow: 1;
+}
 .title {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width:min-content;
+    height: min-content;
+    line-height: 1;
+}
+.heading {
     grid-area: abs;
     text-align: center;
     place-self: center;
     z-index: 20;
-    color: lightslategray;
     line-height: 1.2;
+    color: lightslategray;
 }
 .gfx{
     grid-area: abs;
@@ -25,6 +35,9 @@
 }
 
 
+.info{
+    flex-grow: 0.5;
+}
 .content {
     margin-block: 15rem;
     color: lightgreen;
@@ -36,11 +49,7 @@
 .lang li {
     font-family: inherit;
 }
-.content i {
-    /* width: 4rem;
-    height: 4rem;
-    font-size: 4rem; */
-}
+
 
 .info :is(p, span) {
     line-height: 1.2;
