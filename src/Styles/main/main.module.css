@@ -48,13 +48,25 @@ body:has(.main){
 }
 
 
-.title1 {
-    margin: 0.33rem;
-    color: rgb(0, 0, 63);
-    background-color: lightcyan;
+.sectionTitle {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    width:min-content;
+    height: min-content;
+    line-height: 1;
+    position:sticky;
+    top: 5rem;
+    color: bisque;
 }
-.title2 {
-    margin: 0.33rem;
+
+.sectionCard {
+    flex-grow: 1;
+    place-items: center;
+}
+
+.projectsCard {
+    --themeHue: 20deg;
+    background-color: lemonchiffon;
 }
 
 .who {

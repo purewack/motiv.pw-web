@@ -17,8 +17,8 @@ import {Logo, LogoBar} from "@/Components/Logo";
 import Navbar from "@/Components/Navbar";
 import GFXTitle from "@/Components/GFXTitle/GFXTitle";
 import AnimatedEnterDiv from "@/Components/AnimatedEnterDiv";
-import TripArea from "@/Components/TripArea";
 import SectionCV from "./cv";
+import TripArea from "@/Components/TripArea";
 
 import catSVG from '@/Public/Media/cat-svgrepo-com.svg'
 import numcalciumFace from '@/Public/Media/NumCalcium/face.svg'
@@ -64,7 +64,7 @@ return (<div className={clsx(main.body)}>
 
   <main className={main.content}>
     <section className={clsx(skills.body, layout.twinCol)}>
-      <h1 className={clsx(skills.title, font.size800)}>Skills</h1>
+      <h1 className={clsx(main.sectionTitle, font.size800)}>Skills</h1>
 
       <div className={clsx('card',skills.card,layout.gridAbsolute)}>
         <h1 className={clsx(skills.heading, font.thin, font.headings, font.size800)}>I<br/>love<br/>to<br/>create</h1>
@@ -79,7 +79,7 @@ return (<div className={clsx(main.body)}>
       </div>
     </section>
 
-    <section className={clsx(skills.content)}>
+    <section className={clsx('card',skills.content)}>
       <div className={clsx(layout.twinCol)}>
       <div className={clsx(skills.info, font.subtext, font.right, font.weight600, font.size800)}>
         <p>I'm  
@@ -94,7 +94,7 @@ return (<div className={clsx(main.body)}>
         <p>languages</p> 
         <p>{"I speak :)"}</p>
       </div>
-      <ul className={clsx(font.headings, font.weight200, skills.lang)}>
+      <ul className={clsx(font.headings, font.weight300, skills.lang, layout.listSpaced)}>
         <li>HTML</li>
         <li>CSS</li>
         <li>Javascript</li>
@@ -113,8 +113,14 @@ return (<div className={clsx(main.body)}>
       </div>
       <LanguagesBanner className={main.test}/>
     </section>
-    
-    <h1 className={font.size800}>Projects</h1>
+
+    <section className={clsx(project.title, layout.twinColRev)}>
+      <h1 className={clsx(main.sectionTitle, font.size800)}>Projects</h1>
+      <div className={clsx('card', main.sectionCard,main.projectsCard, layout.padding800, layout.gridAbsolute)}>
+        <GFXTitle className={main.projectsGFX} unit={'70vmin'} text='work' type='sheets' />
+      </div>
+    </section>
+
     <section className={clsx('',project.content)}>
 
       <article className={clsx('card', layout.listCenter, project.numcalcium)}>

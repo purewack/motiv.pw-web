@@ -2,20 +2,13 @@
 .body {
     --theme-back: antiquewhite;
     --theme: snow;
-    padding: 1rem;
 }
 .card {
     background-color: var(--theme-back);
     color: var(--theme);
     flex-grow: 1;
 }
-.title {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    width:min-content;
-    height: min-content;
-    line-height: 1;
-}
+
 .heading {
     grid-area: abs;
     text-align: center;
@@ -37,13 +30,16 @@
 
 .info{
     flex-grow: 0.5;
+    margin-block: 4rem;
 }
 .content {
-    margin-block: 15rem;
-    color: lightgreen;
+    padding: 2rem;
+    color: darkseagreen;
+    /* border: none; */
+    /* background-color: rgb(217, 255, 235); */
 }
 .lang {
-    color: darkseagreen;
+    color: lightgray;
     list-style: none;
 }
 .lang li {

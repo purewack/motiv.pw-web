@@ -3,6 +3,7 @@ import box from './box.module.css'
 import steps from './steps.module.css'
 import vine from './vine.module.css'
 import swirl from './swirl.module.css'
+import sheets from './sheets.module.css'
 import { CSSProperties } from "react";
 
 export default function GFXTitle({
@@ -13,8 +14,8 @@ export default function GFXTitle({
     text = '', 
     shouldStart = false
 } : {
-    text: string,
     type: string,
+    text?: string,
     style?: CSSProperties,
     className?: string,
     unit?: string,
@@ -67,5 +68,15 @@ export default function GFXTitle({
         {[...Array(8)].map((v,i,a) => {
             return <span key={`bot_${i}_${text}`} className={clsx(swirl.title, swirl.titleBottom)} style={{'--index': i,'--nindex': a.length - i} as CSSProperties} data-text={text}>{text}</span>
         })}
+    </div>
+
+    if(type === 'sheets') return <div className={clsx(className, sheets.scene, shouldStart && sheets.start)} style={unitStyle}>
+        <div className={sheets.object}>
+        {[...Array(9)].map((v,i,a) => {
+            return <div key={`sheet_${i}_${text}`} className={clsx('grainy', sheets.face)} style={{'--index': i,'--nindex': a.length - i} as CSSProperties} data-text={text}>
+                <span>{text}</span>
+            </div>
+        })}
+        </div>
     </div>
 }

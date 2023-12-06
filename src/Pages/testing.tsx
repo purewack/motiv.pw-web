@@ -11,7 +11,7 @@ export default function Testing(){
         preEnterClassName={animate.preSlideIn}
         className={clsx("card","fullPage",layout.listCenter, styles.title1)}
         > */}
-        <GFXTitle unit="25vmin" type='swirl' text="skills" />
+        <GFXTitle unit="40rem" type='sheets' text='work'/>
         {/* </AnimatedEnterDiv> */}
     </section>
     )

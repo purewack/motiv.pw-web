@@ -4,6 +4,11 @@
     justify-content: center;
     align-items: center;
 }
+.listSpaced {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 .barCenter {
     display: flex;
     align-items: center;
@@ -24,10 +29,44 @@
     display: flex;
     gap: 1.5rem;
 }
+.twinColRev {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1.5rem;
+}
 .gridAbsolute {
     display: grid;
     grid-template-areas: "abs";
 }
+
+.padding900 {
+    padding: 3rem;
+}
+.padding800 {
+    padding: 2.5rem;
+}
+.padding700{
+    padding: 2.25rem;
+}
+.padding600{
+    padding: 2rem;
+}
+.padding500{
+    padding: 1.5rem;
+}
+.padding400 {
+    padding: 1rem;
+}
+.padding300 {
+    padding: 0.75rem;
+}
+.padding200 {
+    padding: 0.5rem;
+}
+.padding100 {
+    padding: 0.25rem;
+}
+
 
 .margin900 {
     margin: 3rem;
