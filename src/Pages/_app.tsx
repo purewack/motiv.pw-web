@@ -1,5 +1,4 @@
 import '@/Styles/global/colors.css'
-import '@/Styles/global/common.css'
 import '@/Styles/global/reset.css'
 import type { AppProps } from 'next/app'
 import {useEffect} from 'react'

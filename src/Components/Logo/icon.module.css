@@ -5,6 +5,7 @@
   display: grid;
   place-items: center;
   width: min(5vmin, 2rem);
+  font-family: 'Josefin Sans';
 }
 
 .logo svg{

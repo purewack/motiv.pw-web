@@ -1,0 +1,47 @@
+.normal {
+  color: var(--cmain);
+  background-color: var(--cneutral);
+  border-radius: 1rem;
+  border: solid lightgray 1px;
+  contain: paint;
+  line-height: 1.25;
+  font-size: 1.25rem;
+  /* padding: 1rem; */
+}
+.clean {
+  border: none;
+}
+.pseudo {
+  filter: drop-shadow(0 0 1px gray);
+}
+.grainy { 
+  background-image: url("../Styles/global/noise.svg");
+  background-blend-mode: multiply;
+  background-size: 80px;
+}
+
+.page100 {
+  min-height: calc(100vh - 1rem);
+  min-height: calc(100dvh - 1rem);
+  margin: 0.5rem;
+}
+.page200 {
+  min-height: calc(100vh - 2rem);
+  min-height: calc(100dvh - 2rem);
+  margin: 1rem;
+}
+.page300 {
+  min-height: calc(100vh - 3rem);
+  min-height: calc(100dvh - 3rem);
+  margin: 1.5rem;
+}
+.page400 {
+  min-height: calc(100vh - 4rem);
+  min-height: calc(100dvh - 4rem);
+  margin: 2rem;
+}
+.page500 {
+  min-height: calc(100vh - 6rem);
+  min-height: calc(100dvh - 6rem);
+  margin: 3rem;
+}

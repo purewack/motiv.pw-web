@@ -1,3 +1,20 @@
+.title {
+    --themeHue: 20deg;
+    --theme: lemonchiffon;
+}
+
+.card.card  {
+    background-color: var(--theme);
+}
+
+.heading {
+    color: var(--theme);
+    filter: brightness(0.9);
+}
+
+.gfx {
+    
+}
 
 .content {
     display: grid;

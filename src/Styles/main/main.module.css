@@ -8,7 +8,6 @@ body:has(.main){
     background-color: ivory;
     counter-reset: titles;
     min-height: 200vh;
-    padding-top: 1rem;
 }
 
 .body a {
@@ -35,47 +34,23 @@ body:has(.main){
     color: dimgray;
 }
 
-.nav {
-    padding: 0.75rem;
-    position: sticky;
-    top: 0.5rem;
-    background-color: rgba(255, 255, 255, 0.6);
-    /* filter: drop-shadow(0 0 10px white); */
-}
-.nav * {
-    color: rgb(86, 86, 86);
-    stroke: currentColor;
-}
-
-
-.sectionTitle {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
-    width:min-content;
-    height: min-content;
-    line-height: 1;
-    position:sticky;
-    top: 5rem;
-    color: bisque;
-}
-
-.sectionCard {
-    flex-grow: 1;
-    place-items: center;
-}
-
-.projectsCard {
-    --themeHue: 20deg;
-    background-color: lemonchiffon;
-}
 
 .who {
     margin-top: 4rem;
     color: white;
 }
 
-.nav{ 
+.nav {
+    padding: 0.75rem;
+    position: sticky;
+    top: 0.5rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    /* filter: drop-shadow(0 0 10px white); */
     z-index: 100;
+}
+.nav * {
+    color: rgb(86, 86, 86);
+    stroke: currentColor;
 }
 
 .hello, .nav {

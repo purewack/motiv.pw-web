@@ -1,5 +1,6 @@
 .scene {
   transform-style: preserve-3d;
+  font-family: 'Josefin Sans';
 }
 .scene section{
   transform-style: preserve-3d;

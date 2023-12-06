@@ -13,6 +13,13 @@
     display: flex;
     align-items: center;
 }
+.grow {
+    flex-grow: 1;
+}
+.growCenter {
+    flex-grow: 1;
+    place-self: center;
+}
 
 .floatLeft {
     margin-right: auto;
@@ -21,8 +28,9 @@
     margin-left: auto;
 }
 
-.wide {
-    width: 100%;
+.stickyTop500 {
+    position:sticky;
+    top: 5rem;
 }
 
 .twinCol {
@@ -37,6 +45,9 @@
 .gridAbsolute {
     display: grid;
     grid-template-areas: "abs";
+}
+.placeCenter {
+    place-self: center;
 }
 
 .padding900 {
@@ -96,7 +107,9 @@
     margin: 0.25rem;
 }
 
-
+.block1000 {
+    margin-block: 16rem;
+}
 .block900 {
     margin-block: 12rem;
 }
@@ -106,3 +119,23 @@
 .block700 {
     margin-block: 8rem;
 }
+.block600 {
+    margin-block: 6rem;
+}
+.block500 {
+    margin-block: 4rem;
+}
+.block400 {
+    margin-block: 3rem;
+}
+.block300 {
+    margin-block: 2rem;
+}
+.block200 {
+    margin-block: 1rem;
+}
+.block100 {
+    margin-block: 0.5rem;
+}
+
+

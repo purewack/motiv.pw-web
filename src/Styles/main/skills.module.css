@@ -1,18 +1,18 @@
 
-.body {
+.title {
     --theme-back: antiquewhite;
     --theme: snow;
 }
-.card {
+.heading {
+    color: var(--theme-back);
+    filter: brightness(0.9);
+}
+.card.card {
     background-color: var(--theme-back);
     color: var(--theme);
-    flex-grow: 1;
 }
-
-.heading {
+.message {
     grid-area: abs;
-    text-align: center;
-    place-self: center;
     z-index: 20;
     line-height: 1.2;
     color: lightslategray;
@@ -32,7 +32,7 @@
     flex-grow: 0.5;
     margin-block: 4rem;
 }
-.content {
+.content.content {
     padding: 2rem;
     color: darkseagreen;
     /* border: none; */
