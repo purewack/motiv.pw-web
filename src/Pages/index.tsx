@@ -83,7 +83,7 @@ return (<div className={clsx(main.body)}>
           <TripArea>{(
             triggerRef: React.RefObject<HTMLInputElement>, 
             tripped: boolean
-          ) => <span ref={triggerRef} className={tripped && skills.polish}> Polish</span>}
+          ) => <span ref={triggerRef} className={tripped && skills.polish}>Polish</span>}
           </TripArea>
         </p>
         <p>but here's</p> 
