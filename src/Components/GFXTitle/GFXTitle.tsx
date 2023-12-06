@@ -75,7 +75,7 @@ export default function GFXTitle({
     if(type === 'sheets') return <div className={clsx(className, sheets.scene, shouldStart && sheets.start)} style={unitStyle}>
         <div className={sheets.object}>
         {[...Array(9)].map((v,i,a) => {
-            return <div key={`sheet_${i}_${items}`} className={clsx(card.grainy, sheets.face)} style={{'--index': i,'--nindex': a.length - i} as CSSProperties} data-items={items}>
+            return <div key={`sheet_${i}_${items}`} className={clsx(card.grainy, sheets.face)} style={{'--rand': Math.random(), '--index': i,'--nindex': a.length - i} as CSSProperties} data-items={items}>
                 <span>{items}</span>
             </div>
         })}
