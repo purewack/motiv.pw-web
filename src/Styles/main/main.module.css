@@ -1,13 +1,14 @@
-/* 
-body:has(.main){
-    background-color: var(--cprimary);
-    overflow-x: hidden;
-} */
+
+body:has(.body){
+    background-color: ivory;
+} 
 
 .body {
-    background-color: ivory;
+    background-color: none;
     counter-reset: titles;
-    min-height: 200vh;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-top: 1rem;
 }
 
 .body a {
@@ -45,38 +46,43 @@ body:has(.main){
     position: sticky;
     top: 0.5rem;
     background-color: rgba(255, 255, 255, 0.6);
-    /* filter: drop-shadow(0 0 10px white); */
     z-index: 100;
+    color: rgb(86, 86, 86);
 }
 .nav * {
-    color: rgb(86, 86, 86);
+    transition: color 2s;
     stroke: currentColor;
 }
 
-.hello, .nav {
+.hero, .nav {
+    animation: kf-begin 1s 0.25s both;
     transition: background-color 2s 0.2s, border 3s 0.2s, border-radius 3s 0.2s, margin 3s 0.2s;
+    --initialColor: var(--cprimary);
+}@keyframes kf-begin {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
-.hello:not(.trip) {
-    border-bottom-color: ivory;
+
+.hero:not(.trip) {
+    border-bottom-color: var(--initialColor);
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
+    margin-bottom: 0;
 }
-:is(.hello, .nav):not(.trip){
-    background-color: ivory;
+:is(.hero, .nav):not(.trip){
+    background-color: var(--initialColor);
 }
 .nav:not(.trip){
-    border-top-color: ivory;
+    border-top-color: var(--initialColor);
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     margin-inline: 1rem;
 }
+.nav:not(.trip) > * {
+    color: var(--initialColor);
+    user-select: none;
+}
 .nav.trip{
     margin-top: 1rem;
     margin-inline: 0.25rem;
-}
-
-.test {
-    font-size: 4rem;
-    display: flex;
-    justify-content: space-evenly;
 }

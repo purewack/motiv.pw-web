@@ -24,26 +24,31 @@ import TripArea from "@/Components/TripArea";
 import catSVG from '@/Public/Media/cat-svgrepo-com.svg'
 import numcalciumFace from '@/Public/Media/NumCalcium/face.svg'
 import ProjectTags from "@/Components/ProjectTags";
+import VerticalBarsSVG from "@/Components/VerticalBarsSVG";
 
 export default function MainPage() {
 
   // const [option, setOption] = useState('music');
+const [ready, setReady] = useState(false);
 
 return (<div className={clsx(main.body)}>
 
-  <header id="hero" className={clsx(hero.content, card.normal, font.headings, card.page200, layout.listCenter)}>
+  <header id="hero" onClick={()=>{setReady(true)}} className={clsx(ready && main.trip, main.hero, hero.content, card.normal, font.headings, card.page200, layout.listCenter)}>
     <Logo type="full" unit={'14vw'}/>
     <h2>P H O N I C</h2>
     <h2>W O R K S</h2>
-    <Logo />
-    <a href="#hello" className={hero.next}><span>︾</span></a>
+    {/* <Logo /> */}
+    <span className={hero.next}>︾</span>
+    {ready && <VerticalBarsSVG className={hero.bars} numBars={20} onEnd={()=>{}}/>}
   </header>
-    
-  <TripArea>{(
-    triggerRef: React.RefObject<HTMLInputElement>, 
-    tripped: boolean
-  ) => <>
-    <header className={clsx(main.hello, hello.body, font.headings, card.normal, tripped && main.trip, layout.gridAbsolute, card.page200)}>
+  <Navbar className={clsx(ready && main.trip, main.nav, card.normal, font.headings)}/>
+  
+  {ready && <>
+  {/* <TripArea>{( */}
+    {/* triggerRef: React.RefObject<HTMLInputElement>,  */}
+    {/* tripped: boolean */}
+  {/* ) => <> */}
+    <header className={clsx(main.hello, hello.body, font.headings, card.normal, true && main.trip, layout.gridAbsolute, card.page200)}>
       <div className={clsx(hello.bars, hello.heading, font.headings, font.upper)}>
         <LogoBar className={hello.bar1} text={"H E L L O - T H E R E - "} />
         <LogoBar className={hello.bar2} text={"I - D E S I G N - "} />
@@ -58,10 +63,9 @@ return (<div className={clsx(main.body)}>
         <h4>An audio engineer</h4>
       </div>
     </header>
-    <Navbar className={clsx(main.nav, card.normal, tripped && main.trip)}/>
-    <span ref={triggerRef}></span>
-    </>}
-  </TripArea>
+    {/* <span ref={triggerRef}></span> */}
+    {/* </>} */}
+  {/* </TripArea> */}
 
   <main className={main.content}>
     <section className={clsx(skills.title, layout.twinCol)}>
@@ -203,6 +207,8 @@ return (<div className={clsx(main.body)}>
     <div className={clsx("card","fullPage",layout.listCenter, styles.title2)}>
       <GFXTitle type="vine" unit="25vmin" text="Work" />
     </div> */}
+    
   </main>
+  </>}
 </div>);
 }

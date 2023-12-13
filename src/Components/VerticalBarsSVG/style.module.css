@@ -1,0 +1,47 @@
+.bars {
+  /* height: 200px;
+  width: 200px; */
+}
+
+.bar {
+  fill: black;
+  /* stroke: red; */
+  --xx: calc(var(--x) + (var(--w) / 2));
+}
+
+@keyframes grow {
+  0% {
+    scale: 0.5 0;
+  }
+  80% {
+    scale: 0.5 1;
+  }
+  100% {
+    scale: 0.5 1;
+  }
+}
+
+.up {
+  scale: 0;
+  transform-origin: var(--xx) 50px;
+  animation: grow var(--dur) ease-in-out var(--delay) forwards;
+}
+
+.down {
+  scale: 0;
+  transform-origin: var(--xx) 50px;
+  animation: grow var(--dur) ease-in-out var(--delay) forwards;
+}
+
+
+.done {
+  animation: done 1s ease-in-out 0s both;
+}
+@keyframes done {
+  0% {
+    scale: 0.5 1;
+  }
+  100% {
+    scale: 1.1 1;
+  }
+}

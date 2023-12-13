@@ -1,11 +1,9 @@
+
 .content.content { 
-    animation: kf-begin 1s 0.25s both;
     position: relative;
     background-color: var(--cprimary);
-}
-@keyframes kf-begin {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    margin-top: 0;
+    min-height: calc(100vh - 6rem);
 }
 
 .content, 
@@ -41,6 +39,7 @@
     opacity: calc(var(--pstart));
     /* mix-blend-mode: difference; */
     filter: drop-shadow(0 0 10px white);
+    font-size: 4rem;
 }
 .next:hover{
     animation: kf-hover 0.75s infinite alternate;
@@ -53,4 +52,16 @@
     from {transform: translateY(0);}
     80% {transform: translateY(1rem);}
     to {transform: translateY(1rem);}
+}
+
+.bars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+}
+.bars.bars > *{
+    fill: darkgreen;
 }
